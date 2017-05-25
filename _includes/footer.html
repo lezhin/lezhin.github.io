@@ -1,0 +1,23 @@
+<footer class="site-footer">
+    <div class="container">
+        <div class="copyright">
+            &copy 2013-2017 <a class="plain" href="//lezhin.com">LezhinEnt.</a>
+        </div>
+        <div class="site-links">
+            {% if site.github_username %}
+            <a class="plain fa fa-github" href="//github.com/{{ site.github_username }}"></a>
+            {% endif %}
+            {% if site.facebook_username %}
+            <a class="plain fa fa-facebook" href="//facebook.com/{{ site.facebook_username }}"></a>
+            {% endif %}
+            {% if site.twitter_username %}
+            <a class="plain fa fa-twitter" href="//twitter.com/{{ site.twitter_username }}"></a>
+            {% endif %}
+            <a class="plain fa fa-rss" href="{{ site.baseurl }}/rss"></a>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</footer>
+{% include google_analytics.html %}
+<script src="{{ site.baseurl }}/assets/js/index.min.js"></script>
+

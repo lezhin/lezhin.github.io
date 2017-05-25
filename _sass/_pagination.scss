@@ -1,0 +1,31 @@
+.pagination {
+  text-align: center;
+  .page-number, .page-prev, .page-next {
+    list-style: none;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 24px;
+    vertical-align: middle;
+    color: $darkgray;
+    &.active, a:active, &:hover, a:hover {
+      background-color: $lightgray;
+    }
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 4px;
+      color: $darkgray;
+      cursor: pointer;
+    }
+  }
+  .page-number + .page-number {
+    margin-left: 10px;
+  }
+}
+
+
+

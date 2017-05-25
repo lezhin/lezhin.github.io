@@ -1,0 +1,240 @@
+.container-fluid {
+  width: 100%;
+}
+
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+}
+
+.site-header {
+  border-bottom: 1px solid $lightgray;
+  margin: 1em;
+  padding: 1em;
+  .site-title {
+    float: left;
+    i {
+      display: inline-block;
+      margin-right: .5em;
+      width: 50px;
+      height: 50px;
+      background: $red url('../img/lezhin_logo_30.png') no-repeat center;
+      background-size: 30px auto;
+    }
+    // hack! https://codepen.io/edge0703/pen/iHJuA
+    i:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+    }
+  }
+  .site-nav {
+    float: right;
+    font-size: 1.25em;
+    a + a {
+      margin-left: .5em;
+    }
+  }
+  .site-title, .site-nav {
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    @include sm {
+      float: none;
+      text-align: center;
+    }
+  }
+  @include sm {
+    margin: 0.25em;
+    padding: 0.25em;
+  }
+}
+
+.site-footer {
+  border-top: 1px solid $lightgray;
+  margin: 1em;
+  padding: 1em;
+  .copyright {
+    float: left;
+  }
+  .site-links {
+    font-size: 1.25em;
+    float: right;
+    a + a {
+      margin-left: .5em;
+    }
+  }
+  .copyright, .site-links {
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    @include sm {
+      float: none;
+      text-align: center;
+    }
+  }
+  @include sm {
+    margin: 0.25em;
+    padding: 0.25em;
+  }
+}
+
+.site-wrapper {
+  margin: 1em;
+  padding: 1em;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  .post-item {
+    margin: 1em 0;
+    padding: 1em 0;
+  }
+  .post-item + .post-item {
+    border-top: 1px solid $lightgray;
+  }
+  .post-title {
+  }
+}
+
+.post-summary, .post-content {
+  margin: 1em 0;
+  text-align: justify;
+  line-height: 1.75em;
+}
+
+.post-content {
+  a {
+    text-decoration: underline;
+  }
+  pre {
+    overflow-x: scroll;
+    border: 1px solid $lightgray;
+    padding: 1em;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    padding-left: 5px;
+    border-left: 10px solid $red;
+  }
+  // https://codepen.io/maxds/pen/DcveB
+  blockquote {
+    display: block;
+    margin: 0;
+    padding: 1em 1.5em 1em 3em;
+    position: relative;
+    border: 1px solid $lightgray;
+    //border-left: 1em solid $red;
+    //border-right: .1em solid $red;
+    //box-shadow: 2px 2px 15px $lightgray;
+    &:before {
+      content: '\201C';
+      font-family: Georgia, serif;
+      font-size: 60px;
+      font-weight: bold;
+      color: $red;
+      position: absolute;
+      left: 10px;
+      top: 5px;
+    }
+    &:after {
+      content: '';
+    }
+  }
+  figure {
+    text-align: center;
+    img {
+      border: 1px solid #e6e6e6;
+      cursor: pointer;
+    }
+    figcaption {
+      margin: 0;
+      text-align: center;
+    }
+    &.half img {
+      width: 50%;
+    }
+    &.full img {
+      width: 100%;
+    }
+  }
+}
+
+.post-meta {
+  float: right;
+  margin: .25em 0 0 1.75em;
+  max-width: 10em;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  .post-author-image {
+    height: 96px;
+    border-radius: 50%;
+  }
+  .post-author, .post-date {
+    margin: 0;
+    font-size: 0.9em;
+  }
+  @include sm {
+    float: none;
+    margin: 0;
+    max-width: 100%;
+    text-align: left;
+    .post-author-image {
+      float: left;
+      height: 48px;
+    }
+    .post-author, .post-date {
+      float: left;
+      margin-left: 0.5em;
+      line-height: 48px;
+    }
+  }
+}
+
+.post-tags {
+  font-size: 0.9em;
+  a {
+    background: $lightgray;
+    padding: 0 .5em;
+    border-radius: 4px;
+  }
+  a + a {
+    margin-left: .25em;
+  }
+}
+
+.share-buttons {
+  margin: .5em;
+  font-size: 1.25em;
+  text-align: center;
+  a {
+    display: inline-block;
+    width: 3em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    vertical-align: middle;
+    background-color: $lightgray;
+    border-radius: 4px;
+  }
+  a + a {
+    margin-left: .5em;
+  }
+}
+
+.forkme {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 149px;
+  height: 149px;
+  z-index: 999;
+  background: url(../img/forkme_red_tr.png) no-repeat;
+}

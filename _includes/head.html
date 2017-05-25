@@ -1,0 +1,29 @@
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>{{ site.title | strip_html }}{% if page.title %} - {{ page.title | strip_html }}{% endif %}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="description" content="{{ page.description | default: site.description | strip_html }}"/>
+<meta name="author" content="{{ page.author | default: site.author }}"/>
+{% if page.tags %}
+<meta name="keywords" content="{{ page.tags | join: ',' }}"/>
+{% endif %}
+
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="{{ page.title | default: site.title | strip_html }}"/>
+<meta property="og:description" content="{{ page.description | default: site.description | strip_html }}"/>
+<meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
+<meta property="og:site_name" content="{{ site.title | xml_escape }}"/>
+
+<meta name="twitter:card" content="summary"/>
+{% if site.twitter_username %}
+<meta name="twitter:site" content="@{{ site.twitter_username }}"/>
+{% endif %}
+<meta name="twitter:title" content="{{ page.title | default: site.title | strip_html }}"/>
+<meta name="twitter:description" content="{{ page.description | default: site.description | strip_html }}"/>
+<meta name="twitter:url" content="{{ site.url }}{{ page.url }}"/>
+
+<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}"/>
+<link rel="alternate" type="application/rss+xml" href="{{ site.baseurl }}/rss"/>
+
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css"/>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>

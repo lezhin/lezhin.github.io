@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include head.html %}
+</head>
+<body class="site {{ page.layout | append: '-layout' }}">
+{% include header.html %}
+<div class="site-wrapper" role="main">
+    <div class="container">
+        {{ content }}
+    </div>
+</div>
+<div class="clearfix"></div>
+{% include footer.html %}
+</body>
+</html>

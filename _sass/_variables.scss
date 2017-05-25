@@ -1,0 +1,26 @@
+$base-color: #000;
+$base-bgcolor: #fff;
+$base-font-family: 'Spoqa Han Sans', 'Roboto', sans-serif !default;
+$base-font-size: 16px !default;
+$base-font-weight: 300 !default;
+$bold-font-weight: 700 !default;
+$line-height: 1.5 !default;
+$heading-font-family: 'Spoqa Han Sans', 'Roboto', sans-serif !default;
+$heading-font-weight: 700 !default;
+$heading-line-height: 1.25 !default;
+$monospace-font-family: 'Roboto Mono', monospace !default;
+
+$lightgray: #e6e6e6;
+$gray: #505050;
+$darkgray: #1e1e1e;
+
+$lightred: #e50020;
+$red: #d60015;
+$darkred: #c80101;
+
+$link-color: $darkgray;
+$link-hover-color: $gray;
+$link-active-color: $lightgray;
+
+$container-width: 960px;
+$breakpoint-sm: 768px;

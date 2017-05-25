@@ -1,0 +1,85 @@
+html, body {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: auto;
+  min-height: 100%;
+  line-height: $line-height;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: $base-font-weight;
+  color: $base-color;
+  background-color: $base-bgcolor;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+  line-height: $heading-line-height;
+}
+
+h1 {
+  font-size: 2.0rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: .875rem;
+}
+
+h6 {
+  font-size: .75rem;
+}
+
+pre, code, tt, kbd {
+  font-family: $monospace-font-family;
+}
+
+b, strong, i, em {
+  font-weight: $bold-font-weight;
+  font-style: normal; // no italic!
+}
+
+a {
+  &:link, &:visited {
+    text-decoration: none;
+    color: $link-color;
+  }
+  &:hover {
+    text-decoration: underline;
+    color: $link-hover-color;
+  }
+  &:active, &:focus {
+    text-decoration: underline;
+    color: $link-active-color;
+  }
+}
+
+@mixin sm {
+  @media (max-width: $breakpoint-sm) {
+    .visible-lg, .hidden-sm {
+      display: none !important;
+    }
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: $breakpoint-sm) {
+    .visible-sm, .hidden-lg {
+      display: none !important;
+    }
+    @content;
+  }
+}

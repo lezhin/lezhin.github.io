@@ -1,0 +1,8 @@
+{% if include.tags.size > 0 %}
+<div class="post-tags">
+  <i class="fa fa-tags" title="tags"></i>
+  {% for tag in include.tags %}
+    <a href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a>
+  {% endfor %}
+</div>
+{% endif %}

@@ -1,0 +1,15 @@
+{% assign author = site.authors | where: 'name', post.author | first %}
+<h2 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+<div class="post-meta">
+    {% assign author = site.authors | where: 'name', post.author | first %}
+    {% if author.image %}
+    <img class="post-author-image" src="{{ author.image }}" alt="{{post.author}}'s profile image"/>
+    {% endif %}
+    <p class="post-author"><i class="fa fa-user" title="author"></i> <a href="{{ site.baseurl }}/authors/{{ post.author }}">{{ post.author }}</a></p>
+    <p class="post-date"><i class="fa fa-calendar" title="date"></i> {{ post.date | date: site.date_format }}</p>
+</div>
+<div class="post-summary">
+    {{ post.description | default: post.excerpt | strip_html | truncatewords: 75 }}
+</div>
+<div class="clearfix"></div>
+{% include post_tags.html tags=post.tags %}
