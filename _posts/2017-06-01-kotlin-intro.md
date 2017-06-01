@@ -64,7 +64,7 @@ object Main {
   fun customFunc(str: String) {
     println(str)
   }
-  val higherOrderFunc: (Int, Int) => Int = { x, y -> x + y }
+  val higherOrderFunc: (Int, Int) -> Int = { x, y -> x + y }
 }
 ```   
 
@@ -92,11 +92,11 @@ object Main {
 
 ```kotlin
 object Main {
-  val normalValue: () -> String = {
+  val normalValue = {
     println("normal value")
     "hello"
   }
-  val lazyValue: () -> String by lazy = {
+  val lazyValue by lazy = {
     println("lazy value")
     "value"
   }
@@ -124,7 +124,7 @@ object Main {
   @JvmStatic
   fun main(args: Array<String>) {
     nullable = null // OK
-    nullable = null // "Compile" Error
+    nullsafe = null // "Compile" Error
     nullable.length // Error
     nullable?.length // OK
     nullsafe.length // OK
@@ -175,7 +175,7 @@ object Main {
     println(second.str)
   }
 }
-object Signleton {
+object Singleton {
   init {
     println("this ($this) is a singleton")
   }
@@ -189,7 +189,7 @@ object Signleton {
 object Main {
   @JvmStatic
   fun main(args: Array<String>) {
-    println("hello".plusString("world"))
+    println("hello".plusString(" world"))
     println(5.add10())
   }
 }
