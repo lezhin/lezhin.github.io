@@ -162,6 +162,9 @@
     &.full img {
       width: 100%;
     }
+    &.noborder img {
+      border: none;
+    }
   }
 }
 
