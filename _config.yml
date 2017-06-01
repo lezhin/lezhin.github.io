@@ -3,6 +3,7 @@ email: tech@lezhin.com
 description: '모두를 즐겁게 하라! Amuse Everyone!'
 url: 'https://tech.lezhin.com'
 baseurl: ''
+image: '/assets/img/lezhin_profile.png'
 timezone: Asia/Seoul
 date_format: "%Y-%m-%d"
 

@@ -8,11 +8,16 @@
 <meta name="keywords" content="{{ page.tags | join: ',' }}"/>
 {% endif %}
 
+{% assign meta_image = page.image | default: site.image %}
+{% unless meta_image contains '://' %}
+{% assign meta_image = meta_image | prepend: site.url %}
+{% endunless %}
 <meta property="og:type" content="article"/>
 <meta property="og:title" content="{{ page.title | default: site.title | strip_html }}"/>
 <meta property="og:description" content="{{ page.description | default: site.description | strip_html }}"/>
 <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
 <meta property="og:site_name" content="{{ site.title | xml_escape }}"/>
+<meta property="og:image" content="{{ meta_image }}"/>
 
 <meta name="twitter:card" content="summary"/>
 {% if site.twitter_username %}
@@ -21,6 +26,7 @@
 <meta name="twitter:title" content="{{ page.title | default: site.title | strip_html }}"/>
 <meta name="twitter:description" content="{{ page.description | default: site.description | strip_html }}"/>
 <meta name="twitter:url" content="{{ site.url }}{{ page.url }}"/>
+<meta name="twitter:image:src" content="{{ meta_image }}"/>
 
 <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}"/>
 <link rel="alternate" type="application/rss+xml" href="{{ site.baseurl }}/rss"/>
