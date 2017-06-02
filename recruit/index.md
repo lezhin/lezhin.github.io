@@ -23,7 +23,6 @@ sitemap: true
 
 저희와 함께하실 분들을 모십니다! 아래 안내된 직군 명을 클릭하면 상세한 채용공고를 확인할 수 있습니다. 
 
- - [**Android 개발자**](android_develop)
  - [**Web 개발자/서비스**](web_develop)
  - [**Web 개발자/백오피스**](backoffice_develop)
  - [**백엔드 개발자**](backend_develop) 
