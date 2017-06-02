@@ -151,10 +151,18 @@
       content: '';
     }
   }
+  table {
+    border: 1px solid $lightgray;
+    padding: .5em;
+    width: 100%;
+    thead {
+      background-color: $lightgray;
+    }
+  }
   figure {
     text-align: center;
     img {
-      border: 1px solid #e6e6e6;
+      border: 1px solid $lightgray;
       cursor: pointer;
     }
     figcaption {
