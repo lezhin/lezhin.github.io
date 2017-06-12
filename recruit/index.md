@@ -23,14 +23,15 @@ sitemap: true
 
 저희와 함께하실 분들을 모십니다! 아래 안내된 직군 명을 클릭하면 상세한 채용공고를 확인할 수 있습니다. 
 
+ - [**정보보호 담당자**](protection_data)
+ - [**IP사업개발 담당자 & 중국사업 담당자**](biz_dept)
  - [**Web 개발자/서비스**](web_develop)
  - [**Web 개발자/백오피스**](backoffice_develop)
  - [**백엔드 개발자**](backend_develop) 
  - [**데이터 분석가**](data_analyst) 
- - [**서비스 운영자**](service_operator)
  - [**기업 홍보 담당자**](pr)
+ - [**한국 서비스 운영자**](service_operator)
  - [**일본 서비스 운영자**](jp_operation)
- - [**IP사업개발 담당자 & 중국사업 담당자**](biz_dept)
 
 ## 공통 지원자격 & 우대사항
 
