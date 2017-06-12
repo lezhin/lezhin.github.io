@@ -2,7 +2,7 @@
 title: '자바 기반의 백엔드와의 세션 공유를 위한 레일즈 세션 처리 분석'
 author: odyss009
 date: 2017-06-01 11:20
-tags: [rails,session,cookie]
+tags: [web,backend,rails,session,cookie]
 ---
 
 [레일즈] 기반의 프론트엔드(브라우저에서 서버 사이드 렌더링 계층까지)와 자바 기반의 백엔드(내부 API와 그 이후 계층)이 세션을 공유하기 위해

@@ -2,7 +2,7 @@
 title: 'Kotlin 맛보기'
 author: lazysoul
 date: 2017-06-01 11:10
-tags: [kotlin,fp]
+tags: [kotlin,fp,android]
 ---
 
 지난 5월 구글I/O를 통해서 안드로이드 공식 지원 언어가 된
