@@ -256,7 +256,7 @@ loadItems();
 
 ## 마무리
 
-IntersectionObserver API는 아직 몇몇 브라우저의 최신 버전에서만 사용할 수 있지만 지원하지 않는 브라우저를 위해 [Polyfill](https://cdn.rawgit.com/WICG/IntersectionObserver/tree-pages/polyfill)을 제공하고 있습니다.
+IntersectionObserver API는 아직 몇몇 브라우저의 최신 버전에서만 사용할 수 있지만 지원하지 않는 브라우저를 위해 [Polyfill](https://github.com/WICG/IntersectionObserver/tree/gh-pages/polyfill)을 제공하고 있습니다.
 
 IntersectionObserver API는 웹 광고 플랫폼 제공자와 사용자 모두에게도 좋은 소식이라 봅니다. 이 API가 정착된다면 광고 노출 여부를 측정하기가 쉬워지고 서비스에 더해졌던 리소스 낭비를 줄일 수 있을 것이라 생각합니다.
 
