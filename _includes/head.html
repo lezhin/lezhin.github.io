@@ -28,6 +28,10 @@
 <meta name="twitter:url" content="{{ site.url }}{{ page.url }}"/>
 <meta name="twitter:image:src" content="{{ meta_image }}"/>
 
+{% if site.google_site_verification %}
+<meta name="google-site-verification" content="{{ site.google_site_verification }}" />
+{% endif %}
+
 <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}"/>
 <link rel="alternate" type="application/rss+xml" href="{{ site.baseurl }}/rss"/>
 
