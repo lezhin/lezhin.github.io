@@ -7,11 +7,13 @@
 {% if page.tags %}
 <meta name="keywords" content="{{ page.tags | join: ',' }}"/>
 {% endif %}
-
 {% assign meta_image = page.image | default: site.image %}
 {% unless meta_image contains '://' %}
 {% assign meta_image = meta_image | prepend: site.url %}
 {% endunless %}
+{% if page.url == '/recruit/' %}
+{% assign meta_image = site.recruit_image %}
+{% endif %} 
 <meta property="og:type" content="article"/>
 <meta property="og:title" content="{{ page.title | default: site.title | strip_html }}"/>
 <meta property="og:description" content="{{ page.description | default: site.description | strip_html }}"/>
