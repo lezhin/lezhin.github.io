@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 채용
+title: 레진이 당신을 기다립니다! - 인재 상시 채용
 sitemap: true
 ---
 안녕하세요!
