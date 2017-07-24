@@ -5,7 +5,7 @@ url: 'http://tech.lezhin.com'
 enforce_ssl: 'tech.lezhin.com'
 baseurl: ''
 image: '/assets/img/recruit_01.png'
-recruit_image: '/assets/img/recruit_02.png'
+recruit_image: '/assets/img/lezhin_recruit.png'
 timezone: Asia/Seoul
 date_format: "%Y-%m-%d"
 
