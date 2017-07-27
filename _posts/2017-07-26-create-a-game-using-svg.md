@@ -75,11 +75,11 @@ tag: [web,frontend]
 
 <style>.video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; } .video-container iframe, .video-container object, .video-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
 
-<div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/F_-zXf1jb8I" frameborder="0" allowfullscreen></iframe></div>
+<div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/F_-zXf1jb8I?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
 이 처리를 DOM으로 바꿔보면 어떻게 될까. 놀랍게도 큰 차이를 보여줍니다(예제: [svg-parallax-test/parallax3](https://uyeong.github.io/svg-parallax-test/parallax3/)).
 
-<div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/VXQ1aT79D2s" frameborder="0" allowfullscreen></iframe></div>
+<div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/VXQ1aT79D2s?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
 SVG에 대한 최적화 상황은 브라우저마다 조금씩 다릅니다. DOM은 과거부터 최적화 노력이 많이 이뤄졌지만, SVG는 `pattern` 요소나 다음 절에서 이야기할 리페인팅 문제 등 성능 문제를 일으키는 부분이 아직 남아있습니다.
 
