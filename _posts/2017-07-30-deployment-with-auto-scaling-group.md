@@ -36,7 +36,83 @@ ASG를 이용한 가장 간단한 배포는, Instance termination policy 를 응
   * 롤백이 필요하면 Standby 상태인 Group B를 ​InService 로 전환하고 Group G의 인스턴스를 종료하거나 Standby 로 전환합니다.
   * 문제가 없다면 Standby 상태인 Group B의 인스턴스를 종료합니다.
 
-이제 ​훨씬 빠르고 안전하게 배포 및 롤백이 가능합니다. 물론 실제로는 생각보다 손이 많이 가는 관계로(특히 PaaS인 GAE에 비하면), 이를 한번에 해주는 스크립트를 작성해서 사내 ​PyPI 저장소를 통해 공유해서 사용중입니다. 조금 응용하면 CI를 통한 배포 자동화도 쉽습니다.
+이제 훨씬 빠르고 안전하게 배포 및 롤백이 가능합니다. 물론 실제로는 생각보다 손이 많이 가는 관계로(특히 PaaS인 GAE에 비하면), 이를 한번에 해주는 스크립트를 작성해서 사용중입니다. 대략 간략하게는 다음과 같습니다. 실제 사용중인 스크립트에는 dry run 등의 잡다한 기능이 많이 들어가 있어서 걷어낸 pseudo code 입니다. 스크립트는 사내 PyPI 저장소를 통해 공유해서 사용중입니다.
+
+    def deploy(prefix, image_name, image_version):
+        '''Deploy specified Docker image name and version into Auto Scaling Group'''
+        asg_names = get_asg_names_from_tag(prefix, 'docker:image:name', image_name)
+        groups = get_auto_scaling_groups(asg_names)
+
+        # Find deployment target set
+        future_set = set(map(lambda g: g['AutoScalingGroupName'].split('-')[-1], filter(lambda g: not g['DesiredCapacity'], groups)))
+        if len(future_set) != 1:
+            raise ValueError('Cannot specify target auto scaling group')
+        future_set = next(iter(future_set))
+        if future_set == 'green':
+            current_set = 'blue'
+        elif future_set == 'blue':
+            current_set = 'green'
+        else:
+            raise ValueError('Set name shoud be green or blue')
+
+        # Deploy to future group
+        future_groups = filter(lambda g: g['AutoScalingGroupName'].endswith(future_set), groups)
+        for group in future_groups:
+            asg_client.create_or_update_tags(Tags=[
+                {
+                    'ResourceId': group['AutoScalingGroupName'],
+                    'ResourceType': 'auto-scaling-group',
+                    'PropagateAtLaunch': True,
+                    'Key': 'docker:image:version',
+                    'Value': image_version,
+                }
+            ])
+            # Set capacity, scaling policy, scheduled actions same as current group
+            set_desired_capacity_from(current_set, group)
+            move_scheduled_actions_from(current_set, group)
+            move_scaling_policies(current_set, group)
+
+        # Await ELB healthy of instances in group
+        await_elb_healthy(future_groups)
+
+        # Entering standby for current group
+        for group in filter(lambda g: g['AutoScalingGroupName'].endswith(current_set), groups):
+            asg_client.enter_standby(
+                AutoScalingGroupName=group['AutoScalingGroupName'],
+                InstanceIds=list(map(lambda i: i['InstanceId'], group['Instances'])),
+                ShouldDecrementDesiredCapacity=True
+            )
+
+    def rollback(prefix, image_name, image_version):
+        '''Rollback standby Auto Scaling Group to service'''
+        asg_names = get_asg_names_from_tag(prefix, 'docker:image:name', image_name)
+        groups = get_auto_scaling_groups(asg_names)
+
+        def filter_group_by_instance_state(groups, state):
+            return filter(
+                lambda g: len(filter(lambda i: i['LifecycleState'] == state, g['Instances'])) == g['DesiredCapacity'] and g['DesiredCapacity'],
+                groups
+            )
+
+        standby_groups = filter_group_by_instance_state(groups, 'Standby')
+        inservice_groups = filter_group_by_instance_state(groups, 'InService')
+
+        # Entering in-service for standby group
+        for group in standby_groups:
+            asg_client.exit_standby(
+                AutoScalingGroupName=group['AutoScalingGroupName'],
+                InstanceIds=list(map(lambda i: i['InstanceId'], group['Instances']))
+            )
+
+        # Await ELB healthy of instances in standby group
+        await_elb_healthy(standby_groups)
+
+        # Terminate instances to rollback
+        for group in inservice_groups:
+            asg_client.set_desired_capacity(AutoScalingGroupName=group['AutoScalingGroupName'], DesiredCapacity=0)
+            current_set = group['AutoScalingGroupName'].split('-')[-1]
+            move_scheduled_actions_from(current_set, group)
+            move_scaling_policies(current_set, group)
 
 몇 가지 더.
 
