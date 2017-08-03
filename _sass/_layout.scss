@@ -179,6 +179,11 @@
       border: none;
     }
   }
+  p {
+    img {
+      max-width: 100%;
+    }
+  }
 }
 
 .post-meta {
