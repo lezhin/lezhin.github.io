@@ -22,7 +22,7 @@ TL;DR 공개된 데이터셋을 활용하여, **구매 예측 모델**을 만들
   - **1번째 컬럼은 종속변수(label)**이며, 해당 유저가 목록에 진입하고 1시간 이내에 구매했는가를 나타냅니다.
   - **2번째 컬럼부터는 175개의 독립변수(feature)들**이며, 구매 작품과 사용자에 대한 유의미한 값입니다.
   - 8번, 9번, 17번, 19번 컬럼은 해쉬된 값입니다. 나머지 값은 0에서 1의 값을 지닙니다.
-* [다운로드](https://storage.googleapis.com/lz-insight/pycon17/lezhin_public_dataset_training.tar.gz)
+* [다운로드](https://storage.googleapis.com/lz-insight/pycon17/dataset/lezhin_dataset_training.tar.gz)
 
 > 이 데이터셋의 사용은 파이콘 한국 2017 이벤트로 제한됩니다.
 > (이벤트 종료 후 데이터셋을 보강하여 완전 공개할 예정입니다.)
