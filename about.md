@@ -5,7 +5,7 @@ permalink: /about/
 sitemap: true
 ---
 
-{% include figure.html src="/assets/img/lezhin_trans_128x128.png" class="noborder" %}
+{% include figure.html src="/assets/img/lezhin_social_image.png" class="noborder" alt="레진 기술 블로그" %}
 
 프리미엄 웹툰 서비스 - "**[레진코믹스](http://www.lezhin.com)**" 를 만들고 있는 **레진엔터테인먼트**가 운영하는 기술 블로그입니다.
 
