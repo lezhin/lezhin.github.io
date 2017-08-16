@@ -4,6 +4,7 @@ title: 소개
 permalink: /about/
 sitemap: true
 ---
+<a class="forkme" href="https://github.com/lezhin/lezhin.github.io"></a>
 
 {% include figure.html src="/assets/img/lezhin_social_image.png" class="noborder" alt="레진 기술 블로그" %}
 

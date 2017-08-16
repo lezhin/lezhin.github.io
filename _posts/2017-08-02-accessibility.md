@@ -4,6 +4,7 @@ author: naradesign
 date: 2017-08-02
 tag: [web,accessibility]
 ---
+<a href="https://github.com/lezhin/accessibility" class="forkme"></a>
 
 레진엔터테인먼트는 글로벌([한국](https://www.lezhin.com/ko/), [일본](https://www.lezhin.com/ja/), [미국](https://www.lezhin.com/en/)) 서비스를 운영하고 있기에 다양한 사람들의 재능과 욕구에 관심이 있습니다. 우리는 웹 접근성에 관심을 기울여 조금 특별한 욕구를 가진 사람들의 문제를 해결하려고 합니다. 소수의 특별한 욕구는 모두의 욕구와 연결되어 있다고 생각하기 때문입니다.
 

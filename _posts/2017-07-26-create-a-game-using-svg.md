@@ -4,6 +4,7 @@ author: vincent
 date: 2017-07-26
 tag: [web,frontend]
 ---
+<a href="https://github.com/UYEONG/jumping-car" class="forkme"></a>
 
 근래 소규모로 게임 프로그래밍 스터디를 시작했습니다. 서비스 UI를 개발하는 프론트엔드개발자에게 있어 게임 프로그래밍은 언제나 커튼 뒤에 비친 풍경처럼 흐릿하고 형체를 쉽게 알 수 없는 신비한 존재입니다. 이번에 미약하게나마 커튼을 걷어 창문 너머 펼쳐진 풍경을 감상해 보자는 게 이번 스터디의 개인적인 목표입니다.
 
