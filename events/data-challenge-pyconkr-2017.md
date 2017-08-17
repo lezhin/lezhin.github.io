@@ -45,6 +45,11 @@ TL;DR 공개된 데이터셋을 활용하여, **구매 예측 모델**을 만들
 > 이 데이터셋의 사용은 파이콘 한국 2017 이벤트로 제한됩니다.
 > (이벤트 종료 후 데이터셋을 보강하여 완전 공개할 예정입니다.)
 
+## 평가
+
+* [테스트셋 다운로드](https://storage.googleapis.com/lz-insight/pycon17/dataset/lezhin_dataset_v2_test_without_label.tsv.gz)
+* roc auc score
+
 ## 제출 방법
 
 * 작성된 소스코드(또는 소스코드 저장소의 주소)를 [data@lezhin.com](mailto:data@lezhin.com)으로 보내주세요.
