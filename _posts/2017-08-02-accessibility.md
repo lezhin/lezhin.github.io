@@ -46,7 +46,7 @@ W3C에서는 [WCAG 2.1](https://www.w3.org/TR/WCAG21/ "Web Content Accessibility
 6. [발작을 유발하는 콘텐츠를 제공하지 않는다.](https://github.com/lezhin/accessibility#seizure)
 7. [반복되는 콘텐츠 블록을 건너뛸 수 있다.](https://github.com/lezhin/accessibility#bypass)
 8. [모든 문서의 제목은 고유하고 식별할 수 있다.](https://github.com/lezhin/accessibility#title)
-9. [링크 텍스트는 콘텐츠의 목적을 알 수 있다.](https://github.com/lezhin/accessibility#link)
+9. [링크와 버튼 텍스트는 콘텐츠의 목적을 알 수 있다.](https://github.com/lezhin/accessibility#link)
 10. [섹션에는 의미있는 마크업과 헤딩이 있다.](https://github.com/lezhin/accessibility#outline)
 11. [문서의 휴먼 랭귀지 속성을 제공한다.](https://github.com/lezhin/accessibility#lang)
 12. [문맥 변경은 예측할 수 있다.](https://github.com/lezhin/accessibility#predict)
