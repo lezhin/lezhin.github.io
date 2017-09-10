@@ -48,6 +48,7 @@ TL;DR 공개된 데이터셋을 활용하여, **구매 예측 모델**을 만들
 ## 평가
 
 * [테스트셋 다운로드](https://storage.googleapis.com/lz-insight/pycon17/dataset/lezhin_dataset_v2_test_without_label.tsv.gz)
+* [테스트셋 다운로드 (label 포함)](https://storage.googleapis.com/lz-insight/pycon17/dataset/lezhin_dataset_v2_test.tsv.gz)
 * roc auc score
 
 ## 제출 방법
@@ -70,4 +71,26 @@ TL;DR 공개된 데이터셋을 활용하여, **구매 예측 모델**을 만들
 4. 레진코믹스의 데이터팀에서 함께 일할 수 있는 기회!!!
 
 > 제품 수급 상황에 따라 더 좋은 상품으로 교체될 수 있습니다.
+
+
+## 이벤트 참여자 분들
+
+부족한 이벤트에 많은 분들이 참여해주셨습니다. 총 14분이며 누락되거나 score가 잘못되었다면 리포트 부탁드립니다. [label 포함된 테스트셋](https://storage.googleapis.com/lz-insight/pycon17/dataset/lezhin_dataset_v2_test.tsv.gz) 으로 측정했고 별도로 첨부해주신 분은 그 값으로 score를 계산하였습니다. 두번 제출하셨거나 github 코드가 변경된 분들은 가장 높은 값으로 측정했습니다.
+
+| 성함 | 레파지토리 주소 및 첨부파일 | roc_auc_score | 설명 |
+|-----|-----|-----|-----|
+| 서상현님 | [Github Repo](https://github.com/sanxiyn/lezhin-data-challenge-2017) | 0.934052999709 |
+| 솔리드웨어 | | 0.904481809408 | |
+| 김지중님 | [Download Link](https://storage.googleapis.com/lz-insight/pycon17/submissions/jj.kim.zip) | 0.901190532396 | |
+| 이상복님 | [Github Repo](https://github.com/echo304/lezhin_data) | 0.897325135346 | |
+| 신동렬님 | [Github Repo](https://github.com/SDRLurker/lezhin) | 0.883003050991 | |
+| 김성준님 | [Github Repo](https://github.com/withsmilo/lezhin_data_challenge_pyconkr_2017) | 0.879918317131 | |
+| 강석천님 | [Download Link](https://storage.googleapis.com/lz-insight/pycon17/submissions/SukChenKang_main.py) | 0.83873685657 | |
+| 전영호님 | [Github Repo](https://github.com/ForwardYH/Lezin-Data-Challenge) | 0.823087997728 | |
+| John Smith님 | [Github Repo](https://github.com/addjohn/lz-recomm) | 0.721543462361 | |
+| 김형준님 | [Github Gist](https://gist.github.com/soeque1/0646dd87367be56c5fa6e025a2e0d422) | |
+| 장지수님 | [Github Repo](https://github.com/simonjisu/regincomics_data) | |
+| 권경모님 | [Github Gist](https://gist.github.com/kkweon/060ca222250f50d87b53521d874aca49) | | 오류 데이터셋 기준 코드 |
+| 신짱님 | [Github Repo](https://github.com/ShinJJang/lezhin-data-challenge) | | 오류 데이터셋 기준 코드 |
+| 문상환님 | [Github Gist](https://gist.github.com/cynthia/eeda698121dfd120819bd6ca18472411) | | 오류 데이터셋 기준 코드 |
 
