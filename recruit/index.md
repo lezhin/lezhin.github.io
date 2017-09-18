@@ -24,26 +24,25 @@ sitemap: true
 
 저희와 함께하실 분들을 모십니다! 아래 안내된 직군 명을 클릭하면 상세한 채용공고를 확인할 수 있습니다. 
 
-## 콘텐츠생성 그룹
+## 서비스실행 그룹
 
- - [**만화 콘텐츠 PD**](cp_pd)
+ - [**디지털 마케터**](marketing)
 
 ## 서비스운영 그룹
 
  - [**한국 서비스 운영자**](service_operator)
+ - [**모바일&웹 서비스 기획자**](service_planner)
+ 
+## 해외사업 그룹
  - [**일본 서비스 운영자**](jp_operation)
+ - [**한-일 웹툰 제작 PM**](jp_translator_pm)
 
 ## 개발 그룹
 
  - [**Android 개발자**](android_develop)
  - [**Web 개발자**](web_develop)
  - [**Back-end 개발자**](backend_develop) 
- - [**데이터 분석가**](data_analyst) 
  - [**모바일&웹 QA**](qa)
-
-## 경영지원 그룹
-
- - [**정보보호 담당자**](protection_data)
 
 ## 공통 지원자격 & 우대사항
 
@@ -94,7 +93,6 @@ sitemap: true
 - [한·미·일 3국서 가장 사랑받은 웹툰 - [디지털데일리]](http://www.ddaily.co.kr/news/article.html?no=141304)
 - [미국 간 레진코믹스…권정혁 레진코믹스 공동창업자 "아이언맨 만든 마블처럼 키울 것" - [한국경제]](http://www.hankyung.com/news/app/newsview.php?aid=2016012093951)
 - [레진코믹스 웹툰, 세계 최대 시장 미국에 진출한다 - [Inven] ](http://sports.news.naver.com/esports/news/read.nhn?oid=442&aid=0000029074)
-- [“이제는 웹소설”···레진엔터테인먼트 14개 작품 우선 서비스 - [경향신문]](http://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=105&oid=032&aid=0002631827)
 - [레진코믹스, 일본 진출 자신감 넘치는 이유는? - [조선비즈]](http://it.chosun.com/news/article.html?no=2806973)
 - [레진코믹스, 만화왕국 일본공략 '성공'…500만조회 돌파 - [한국경제]](http://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=105&oid=015&aid=0003380384)
 - [엔씨소프트, 프리미엄 웹툰 '레진엔터'에 50억 투자 - [한국경제]](http://www.hankyung.com/news/app/newsview.php?aid=201404163683g)
