@@ -5,8 +5,6 @@
             {% assign current = page.url | downcase | split: '/' %}
             <a href="{{ site.baseurl }}/recruit/" {% if current[1]=='recruit' %}class="active"{% endif %}>채용</a>
             <a href="{{ site.baseurl }}/about/" {% if current[1]=='about' %}class="active"{% endif %}>소개</a>
-            <a href="{{ site.baseurl }}/events/data-challenge-pyconkr-2017"
-              {% if current[1]=='events' %}class="active"{% endif %}>데이터 챌린지!</a>
         </nav>
     </div>
     <div class="clearfix"></div>
