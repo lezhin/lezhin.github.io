@@ -54,7 +54,7 @@ defaults:
     values:
       layout: tag
   - scope:
-      path: 'oss'
+      path: 'events'
     values:
       layout: page
       sitemap: true
