@@ -39,9 +39,6 @@ sitemap: true
 
 ## 개발 그룹
 
- - [**Android 개발자**](android_develop)
- - [**Web 개발자**](web_develop)
- - [**Back-end 개발자**](backend_develop) 
  - [**모바일&웹 QA**](qa)
 
 ## 공통 지원자격 & 우대사항
