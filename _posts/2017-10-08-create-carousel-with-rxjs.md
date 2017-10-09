@@ -5,7 +5,7 @@ date: 2017-10-08
 tag: [web,frontend,rxjs]
 ---
 
-UI를 결정짓는 데이터 즉, 상태(State)를 어디에 보관하고 어떻게 필요로 하는 곳으로 전파할 것인가, UI 개발에 있어 상태는 언제나 큰 문제 중 하나입니다. 우리는 상태를 단순히 변수에 보관하거나 비슷한 성질을 가진 데이터끼리 모아서 객체로 분리하기도 합니다.
+UI를 결정짓는 데이터 즉, 상태(State)를 어디에 보관하고 어떻게 필요로 하는 곳으로 전파할 것인가, UI 개발에 있어 상태는 언제나 큰 문제 중 하나입니다. 우리는 상태를 단순히 변수에 보관하거나 비슷한 성질을 가진 데이터를 모아서 객체로 분리하기도 합니다.
 
 ## 변수
 
@@ -159,11 +159,11 @@ const mousedown$ = Rx.Observable.fromEvent(elList, 'mousedown', {passive: true})
 const mousemove$ = Rx.Observable.fromEvent(window, 'mousemove', {passive: true});
 ```
 
-`mousedown` 이벤트는 `elList` 엘리먼트를 통해 받습니다. 하지만 `mousemove` 이벤트는 window 전역 객체를 통해 받습니다. 만약 `mousemove` 이벤트를 `elList` 엘리먼트를 통해 받게 되면 문제가 발생합니다.
+`mousedown` 이벤트는 `elList` 엘리먼트를 통해 받습니다. 하지만 `mousemove` 이벤트는 window 전역 객체를 통해 받습니다.
 
 ![]({{ site.baseurl }}/files/2017-09-26-create-carousel-with-rxjs/carousel.01.gif){:width="100%" style="display:block;max-width:436px;margin:0 auto"}
 
-마우스 커서가 `elList`를 벗어나는 순간 `mousemove`이벤트가 더 이상 발생하지 않아 매끄럽게 동작하지 않습니다.
+만일 `mousemove` 이벤트를 `elList` 엘리먼트를 통해 받게 되면 마우스 커서가 `elList`를 벗어나는 순간 `mousemove`이벤트가 더 이상 발생하지 않아 매끄럽지 않게 동작합니다.
 
 자, 마우스를 드래그한 만큼 카드 UI를 움직이려면 `mousedown` 했을때의 포지션과 `mousemove` 했을 때의 표지션을 뺀 값, 즉 `deltaX`가 필요합니다. `mousedown$` 과 `mousemove$`을 조합해 `deltaX` 값을 흘려보낼 스트림을 만들어봅시다.
 
@@ -200,7 +200,7 @@ mousedown$
     });
 ```
 
-[`takeUntil`](http://reactivex.io/documentation/operators/takeuntil.html)은 인자로 전달된 "부 Observable"에 이벤트가 발생하면 그 후에 생성된 "주 Observable"의 값을 폐기합니다. 즉, `mousemove$`은 `mouseup$`에 이벤트가 발생하기 전까지만 흐르며 `mouseup$` 이벤트 후에 생성된 값은 폐기됩니다.
+[`takeUntil`](http://reactivex.io/documentation/operators/takeuntil.html)은 인수로 전달한 "부 Observable"에 이벤트가 발생하면 그 후에 생성된 "주 Observable"의 값을 폐기합니다. 즉, `mousemove$`은 `mouseup$`에 이벤트가 발생하기 전까지만 흐르며 `mouseup$` 이벤트 후에 생성된 값은 폐기됩니다.
 
 ![]({{ site.baseurl }}/files/2017-09-26-create-carousel-with-rxjs/carousel.03.gif){:width="100%" style="display:block;max-width:436px;margin:0 auto"}
 
@@ -295,7 +295,7 @@ Rx.Observable.merge(dragging$, dragend$)
     });
 ```
 
-`scan` 오퍼레이터는 자바스크립트 Array의 [`reduce`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)와 같습니다. `scan` 오퍼레이터의 첫 번째 인자로는 콜백 함수를 전달합니다. 콜백에 전달되는 첫 번째 인수는 `accumulator`로 이전의 값 즉, 누산값이 전달됩니다. 두 번째 인수는 새롭게 대체될 값으로 여기에서는 함수가 전달된다고 가정하고 있습니다. `scan` 오퍼레이터의 두 번째 인자는 초깃값을 전달합니다.
+`scan` 오퍼레이터는 자바스크립트 Array의 [`reduce`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)와 같습니다. `scan` 오퍼레이터의 첫 번째 인수에는 콜백 함수를 전달합니다. 콜백에 전달되는 첫 번째 인자는 `accumulator`로 이전의 값 즉, 누산값이 전달됩니다. 두 번째 인자는 새롭게 대체될 값으로 여기에서는 함수가 전달된다고 가정하고 있습니다. `scan` 오퍼레이터의 두 번째 인수에는 초깃값을 전달합니다.
 
 이제 `dragging$`과 `dragend$`을 각각 다음과 같이 수정합니다.
 
@@ -330,21 +330,21 @@ const dragend$ = dragging$
 
 마지막으로 [NEXT] 버튼을 누르면 다음으로 [PREV] 버튼을 누르면 이전으로 특정 인디케이션을 클릭하면 적절한 위치로 자동 슬라이드 되도록 수정합니다.
 
-앞 절에서 우리는 `scan` 오퍼레이터를 사용해 index 값을 갖는 State store를 만들었습니다. 이 상태 값을 변경하는 스트림을 만들면 이벤트 발생 시 변경된 상태가 흐르게 되고 최종적으로 UI에 반영될 것입니다.
+앞 절에서 우리는 `scan` 오퍼레이터를 사용해 index 값을 갖는 상태 스토어를 만들었습니다. 이 상태 값을 변경하는 스트림을 만들면 이벤트 발생 시 변경된 상태가 흐르게 되고 최종적으로 UI에 반영될 것입니다.
 
 ```javascript
 const previous$ = Rx.Observable.fromEvent(elPrevious, 'click')
-	// index가 0보다 클때만 1을 감소시킨다.
+	// index가 0보다 클때만 1 감소시킨다.
     .map(() => ({index}) => ({index: index > 0 ? index - 1 : index}));
 
 const next$ = Rx.Observable.fromEvent(elNext, 'click')
-    // index가 캐러셀 아이템 갯수보다 작을때만 1을 증가시킨다.
+    // index가 캐러셀 아이템 갯수보다 작을때만 1 증가시킨다.
     .map(() => ({index}) => ({index: index < count ? index + 1 : index}));
 
 const indication$ = Rx.Observable.fromEvent(elIndicator, 'click')
     .map(el => el.target.closest('.swiper__indication'))
     .filter(el => el !== null)
-	// 클릭된 인디케이션의 index 데이터 값을 상태 값으로 할당한다.
+	// 클릭된 인디케이션의 index 데이터 값을 상태로 할당한다.
     .map(el => () => ({index: parseInt(el.dataset.index, 10)}));
 ```
 
@@ -415,17 +415,17 @@ const dragend$ = dragging$
     });
 
 const previous$ = Rx.Observable.fromEvent(elPrevious, 'click')
-    // index가 0보다 클때만 1을 감소시킨다.
+    // index가 0보다 클때만 1 감소시킨다.
     .map(() => ({index}) => ({index: index > 0 ? index - 1 : index}));
 
 const next$ = Rx.Observable.fromEvent(elNext, 'click')
-    // index가 캐러셀 아이템 갯수보다 작을때만 1을 증가시킨다.
+    // index가 캐러셀 아이템 갯수보다 작을때만 1 증가시킨다.
     .map(() => ({index}) => ({index: index < count ? index + 1 : index}));
 
 const indication$ = Rx.Observable.fromEvent(elIndicator, 'click')
     .map(el => el.target.closest('.swiper__indication'))
     .filter(el => el !== null)
-    // 클릭된 인디케이션의 index 데이터 값을 상태 값으로 할당한다.
+    // 클릭된 인디케이션의 index 데이터 값을 상태로 할당한다.
     .map(el => () => ({index: parseInt(el.dataset.index, 10)}));
 
 Rx.Observable.merge(dragging$, dragend$, previous$, next$, indication$)
@@ -447,7 +447,7 @@ Rx.Observable.merge(dragging$, dragend$, previous$, next$, indication$)
 
 ## 끝으로
 
-RxJS를 사용하면 스트림내 모든 값이 흐르기 때문에 코드를 읽고 동작을 파악하기 쉽습니다. 전체 코드를 스트림을 따라 읽어보세요. 상태는 외부에 존재하지 않으며 순수 함수를 이용해 값을 다시 생산하므로 부작용이 없습니다. 항상 스트림의 정상에서 값이 출발해 마지막까지 흐를 뿐이며 UI는 그저 값에 "반응"할 뿐입니다.
+RxJS를 사용하면 스트림내 모든 값이 흐르기 때문에 코드를 읽고 동작을 파악하기 쉽습니다. 전체 코드를 스트림을 따라 읽어보세요. 상태는 외부에 존재하지 않으며 순수 함수를 이용해 값을 다시 생산하므로 부작용이 없습니다. 항상 스트림의 정상에서 값이 출발해 마지막까지 흐를 뿐이며 UI는 그저 "반응"할 뿐입니다.
 
 위 예제를 순수 자바스크립트로만 작성하면 오히려 코드의 양은 적습니다. 하지만 상태는 외부에 존재하고 어디에서 어떻게 값을 변경하고 있는지 또 값을 변경하면 어떤 부작용이 따르는지 쉽게 예측하기 어렵습니다.
 
