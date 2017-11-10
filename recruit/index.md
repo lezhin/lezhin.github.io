@@ -24,10 +24,6 @@ sitemap: true
 
 저희와 함께하실 분들을 모십니다! 아래 안내된 직군 명을 클릭하면 상세한 채용공고를 확인할 수 있습니다. 
 
-## 서비스실행 그룹
-
- - [**디지털 마케터**](marketing)
-
 ## 서비스운영 그룹
 
  - [**한국 서비스 운영자**](service_operator)
@@ -37,10 +33,15 @@ sitemap: true
  - [**일본 서비스 운영자**](jp_operation)
  - [**한-일 웹툰 제작 PM**](jp_translator_pm)
  - [**한-영 번역 Editor**](us_translator_editor)
+ - [**미국 해외사업 담당자**](us_business_operator)
 
 ## 개발 그룹
 
  - [**모바일&웹 QA**](qa)
+
+## 사업 그룹
+
+ - [**IP사업개발 담당자**](ip_biz)
 
 ## 공통 지원자격 & 우대사항
 
