@@ -24,6 +24,11 @@ sitemap: true
 
 저희와 함께하실 분들을 모십니다! 아래 안내된 직군 명을 클릭하면 상세한 채용공고를 확인할 수 있습니다. 
 
+## 콘텐츠 생성 그룹
+
+- [**웹툰 PD**](webtoon_pd)
+- [**한일 웹툰 제작PM**](jp_translator_pm)
+
 ## 서비스실행&운영 그룹
 
 - [**한국 서비스 운영자**](service_operator)
@@ -37,6 +42,7 @@ sitemap: true
 - [**Biz.개발팀 백엔드개발자**](biz_backend_develop)
 - [**웹개발팀 웹개발자**](web_develop)
 - [**서비스개발팀 백엔드개발자**](backend_develop)
+- [**Android 개발자**](android_develop)
 - [**모바일 & 웹 QA**](qa)
 
 ## 공통 지원자격 & 우대사항
