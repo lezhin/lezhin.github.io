@@ -35,6 +35,10 @@
     a {
       padding: 0 .5em;
     }
+    a:active, a:hover {
+      text-decoration: none;
+      border-bottom: 2px solid $gray;
+    }
     a.active {
       border-bottom: 2px solid $red;
     }
