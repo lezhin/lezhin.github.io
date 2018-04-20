@@ -123,7 +123,7 @@
     text-decoration: underline;
   }
   pre {
-    overflow-x: scroll;
+    overflow-x: auto;
     border: 1px solid $lightgray;
     padding: 1em;
   }
@@ -154,6 +154,12 @@
     &:after {
       content: '';
     }
+  }
+  code {
+    padding: .2em .4em;
+    font-size: 85%;
+    background-color: rgba(27,31,35,.05);
+    border-radius: 3px;
   }
   table {
     border: 1px solid $lightgray;
