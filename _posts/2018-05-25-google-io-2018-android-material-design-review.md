@@ -256,6 +256,7 @@ class SampleApp extends StatelessWidget {
 * Getting started with Material Theme Editor: [https://youtu.be/BLrgDgd_1c0](https://youtu.be/BLrgDgd_1c0)
 * Getting started with Gallery: [https://youtu.be/TIB3q68ZHYw](https://youtu.be/TIB3q68ZHYw)
 * [https://design.google/library/making-more-with-material/](https://design.google/library/making-more-with-material/)
+* [https://www.material.io/develop/android/](https://www.material.io/develop/android/)
 * [https://flutter.io/flutter-for-android/](https://flutter.io/flutter-for-android/)
 
 [구글 I/O 2018]:https://events.google.com/io/
