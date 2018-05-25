@@ -80,7 +80,7 @@ AppCompat 테마에 기존 제공하던 colorPrimary, colorPrimaryDark, colorAcc
 추가로 Variant 컬러, Background, Error, Surface 그리고 'On' 컬러를 설정할 수 있도록 업데이트 예정입니다.
 
 ### [타이포그래피 테마(Typography theme)]
-일부 컴포넌트에 커스터마이징 타입 테마를 적용할 수 있도록 업데이트 되었습니다.
+일부 컴포넌트에 커스터마이징 타이포그래피 테마를 적용할 수 있도록 업데이트 되었습니다.
  *  Android 지원<sup>1)</sup> - Bottom Navigation, Buttons, Chips, FAB, Tabs, Top App Bar, Text Fields
  
 ```xml
@@ -137,7 +137,7 @@ Buttons, Cards 컴포넌트의 모양 변경을 할 수 있도록 업데이트 �
 </style>
 ```
 
-MaterialComponents 테마의 cornerRadius, Style 속성을 설정하여 Cards 컴포넌트의 스타일 및 모양을 변경할 수 있습니다.
+MaterialComponents 테마의 cornerRadius, cornerStyle 속성을 설정하여 Cards 컴포넌트의 스타일 및 모양을 변경할 수 있습니다.
 
 --- | --- | ---
 <img src="https://material.io/design/assets/0B6xUSjjSulxcN21PWXZ6VHZtMFk/shapingmaterial-hero-1.png" height="300"/> | <img src="{{ site.baseurl }}/files/2018-05-25-google-io-2018-android-material-design-review/15.png" height="300"/> | <img src="https://material.io/design/assets/1KJfYanLvAfjHcqfPuyKgkaLoZVx2l1D2/color-hierarchybrand-hierarchy-colorshape-owl.png" height="300"/>
@@ -159,9 +159,7 @@ Bottom App Bar는 기존 Top App Bar의 액션(Action)을 화면 하단에서 �
 ```xml
 <android.support.design.widget.CoordinatorLayout
     ...>
-
   <!-- Other components and views -->
-
   <com.google.android.material.bottomappbar.BottomAppBar
       android:id="@+id/bar"
       ...
@@ -172,7 +170,6 @@ Bottom App Bar는 기존 Top App Bar의 액션(Action)을 화면 하단에서 �
       android:id="@+id/fab"
       ...
       app:layout_anchor="@id/bar"/>
-      
 </android.support.design.widget.CoordinatorLayout>
 ```
 
