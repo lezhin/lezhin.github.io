@@ -58,13 +58,13 @@ date: 2018-05-25 00:00:00
 일부 컴포넌트에 커스터마이징 컬러 테마를 적용할 수 있도록 업데이트 되었습니다.
 *  Android 지원<sup>1)</sup> - Bottom Navigation, Buttons, Cards, Chips, FAB, Tabs, Top App Bar, Text Fields
 
-```
+```xml
 <style name="Widget.MyApp.MyButton" parent="Widget.MaterialComponents.Button">
   <item name="backgroundTint">?attr/colorPrimary</item>
 </style>
 ```
 
-```
+```xml
 <style name="Theme.MyApp" parent="Theme.MaterialComponents.Light">
   ...
   <item name="materialButtonStyle">@style/Widget.MyApp.MyButton</item>
@@ -83,8 +83,8 @@ AppCompat 테마에 기존 제공하던 colorPrimary, colorPrimaryDark, colorAcc
 일부 컴포넌트에 커스터마이징 타입 테마를 적용할 수 있도록 업데이트 되었습니다.
  *  Android 지원<sup>1)</sup> - Bottom Navigation, Buttons, Chips, FAB, Tabs, Top App Bar, Text Fields
  
- ```
- <style name="TextAppearance.MyApp.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+```xml
+<style name="TextAppearance.MyApp.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
   ...
   <item name="fontFamily">@font/custom_font</item>
   <item name="android:textStyle">normal</item>
@@ -93,15 +93,15 @@ AppCompat 테마에 기존 제공하던 colorPrimary, colorPrimaryDark, colorAcc
   <item name="android:letterSpacing">0</item>
   ...
 </style>
- ```
+```
  
- ```
- <style name="Theme.MyApp" parent="Theme.MaterialComponents.Light">
+```xml
+<style name="Theme.MyApp" parent="Theme.MaterialComponents.Light">
   ...
   <item name="textAppearanceHeadline1">@style/TextAppearance.MyApp.Headline1</item>
   ...
 </style>
- ```
+```
 
 textAppearanceHeadline1, textAppearanceBody1 등 MaterialComponents 테마 속성에 폰트 이름, 사이즈, 글자 간격 등을 설정할 수 있습니다.
 
@@ -112,7 +112,7 @@ Buttons, Cards 컴포넌트의 모양 변경을 할 수 있도록 업데이트 �
 * 기본 모양은 직사각형에 4dp 라운드 모서리를 가집니다.
 * 둥근 모서리 또는 잘린 모서리 등의 모양 변경을 지원합니다.
   
-```
+```xml
 <style name="Theme.MyApp" parent="Theme.MaterialComponents.Light">
   ...
   <item name="cornerRadiusPrimary">8dp</item>
@@ -123,13 +123,13 @@ Buttons, Cards 컴포넌트의 모양 변경을 할 수 있도록 업데이트 �
 </style> 
 ```
  
-```
+```xml
 <style name="Widget.MyApp.MyCard" parent="Widget.MaterialComponents.MaterialCardView">
   <item name="cardCornerRadius">?attr/cornerRadiusSecondary</item>
 </style> 
 ```
  
-```
+```xml
 <style name="Theme.MyApp" parent="Theme.MaterialComponents.Light">
   ...
   <item name="materialCardViewStyle">@style/Widget.MyApp.MyCard</item>
@@ -156,7 +156,7 @@ Bottom App Bar는 기존 Top App Bar의 액션(Action)을 화면 하단에서 �
 * Bottom Navigation Bar와 함께 사용하지 않도록
 * 최소 두개에서 최대 다섯개의 액션 버튼이 존재하도록 가이드하고 있습니다.
 
-```
+```xml
 <android.support.design.widget.CoordinatorLayout
     ...>
 
@@ -176,7 +176,7 @@ Bottom App Bar는 기존 Top App Bar의 액션(Action)을 화면 하단에서 �
 </android.support.design.widget.CoordinatorLayout>
 ```
 
-```
+```xml
 style="@style/Widget.MaterialComponents.BottomAppBar"
 ```
 
