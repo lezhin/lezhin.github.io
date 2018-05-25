@@ -6,6 +6,7 @@ date: 2018-05-25 00:00:00
 ---
 
 [구글 I/O 2018]에 발표된 안드로이드 머터리얼 디자인(Android Material Design) 관련 내용을 리뷰합니다. 이번 구글 I/O에서는 총 48개의 디자인 관련 앱 리뷰(App Review), 오피스 아워(Office Hour), 섹션(Session) 등이 준비되었고, 그 중 [14개의 섹션이 유투브에] 업데이트되었습니다. 다양한 디자인 섹션 중 이번 글에서는 안드로이드 앱 개발과 관련된 새로운 머터리얼 디자인 도구(Material Design Tool)들과 주요 컴포넌트(Components)들에 대해 정리하고자 합니다.
+<!--more-->
 
 ## 새로운 머터리얼 디자인 도구들
 <img src="https://img.youtube.com/vi/Ty6VjgVHiko/0.jpg" height="300"/>
