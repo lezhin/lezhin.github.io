@@ -51,6 +51,11 @@ b, strong, i, em {
   font-style: normal; // no italic!
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 a {
   &:link, &:visited {
     text-decoration: none;
