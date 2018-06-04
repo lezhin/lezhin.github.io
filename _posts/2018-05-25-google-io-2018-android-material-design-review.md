@@ -18,7 +18,7 @@ date: 2018-05-25 00:00:00
 
 --- | ---
 ![](/files/2018-05-25-google-io-2018-android-material-design-review/1.png){: width="414" height="300"} | ![](/files/2018-05-25-google-io-2018-android-material-design-review/2.png){: width="416" height="300"}
-![](/files/2018-05-25-google-io-2018-android-material-design-review/3.png){: width="292" height="300"} | ![](/files/2018-05-25-google-io-2018-android-material-design-review/4.png){: width="289" height="300"}
+![](/files/2018-05-25-google-io-2018-android-material-design-review/3.png){: width="413" height="300"} | ![](/files/2018-05-25-google-io-2018-android-material-design-review/4.png){: width="412" height="300"}
 
 <sup>시계방향으로 색상, 타이포그래피, 아이콘, 모양</sup>
 
