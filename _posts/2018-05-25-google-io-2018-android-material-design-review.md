@@ -9,7 +9,7 @@ date: 2018-05-25 00:00:00
 <!--more-->
 
 ## 새로운 머터리얼 디자인 도구들
-![](https://img.youtube.com/vi/Ty6VjgVHiko/0.jpg){: width="400" height="300"}
+{% include youtube.html v="Ty6VjgVHiko" %}
 
 구글은 인기 디자인 툴킷(Toolkit)인 스케치(Sketch)와 연동할 수 있는 머터리얼 플러그인(Material Plugin, macOS High Sierra 10.13 이상 지원)을 새롭게 공개했습니다. 머터리얼 플러그인을 추가하면 머터리얼 테마를 커스터마이징하여 디자인에 쉽게 적용하고 공유할 수 있습니다.
 
@@ -50,7 +50,7 @@ date: 2018-05-25 00:00:00
 <sup>왼쪽부터 Filled, Outlined, Rounded, Two-Tone, Sharp 테마의 delete_forever 아이콘</sup>
 
 ## 색상, 타이포그래피, 모양
-![](https://img.youtube.com/vi/3VUMl_l-_fI/0.jpg){: width="400" height="300"}
+{% include youtube.html v="3VUMl_l-_fI" %}
 
 세션에서 자주 언급하는 단어는 색상(Color), 타이포그래피(Typography), 모양(Shape) 입니다. 디자이너가 레진코믹스 안드로이드 앱에 어울리는 머터리얼 색상, 타이포그래피, 모양 테마를 안내해주면 개발자가 쉽게 컴포넌트(Components)에 적용할 수 있도록 지원합니다.
 
@@ -143,7 +143,7 @@ MaterialComponents 테마의 cornerRadius, cornerStyle 속성을 설정하여 Ca
 ![](https://material.io/design/assets/0B6xUSjjSulxcN21PWXZ6VHZtMFk/shapingmaterial-hero-1.png){: width="407" height="300"} | ![](/files/2018-05-25-google-io-2018-android-material-design-review/15.png){: width="170" height="300"} | ![](https://material.io/design/assets/1KJfYanLvAfjHcqfPuyKgkaLoZVx2l1D2/color-hierarchybrand-hierarchy-colorshape-owl.png){: width="169" height="300"}
 
 ## 컴포넌트
-![](https://img.youtube.com/vi/D7LB-QPxH9c/0.jpg){: width="400" height="300"}
+{% include youtube.html v="D7LB-QPxH9c" %}
 
 구글은 [머터리얼 디자인 컴포넌트 라이브러리(MDC-Android)]를 오픈소스로 공개했습니다. 아직 알파(Alpha) 버전으로 적극적으로 사용하기에 걱정스럽기는 합니다만, 2018년 7월에 안드로이드 베타(Beta) 버전을 제공하고 2018년 11월까지 지속적인 릴리즈를 진행한다는 [로드맵]을 제공하고 있습니다. 버튼과 같이 기본적인 컴포넌트부터 하나씩 적용해보면 좋겠습니다.
 
@@ -210,7 +210,7 @@ Backdrop은 백 레이어(Back layer)에서 프런트 레이어(Front layer)에 
 <sup>왼쪽부터 Material Components, Shrine(demo), Shrine(codelabs)</sup>
 
 ## 플러터
-![](https://img.youtube.com/vi/hA0hrpR-o8U/0.jpg){: width="400" height="300"}
+{% include youtube.html v="hA0hrpR-o8U" %}
 
 [플러터(Flutter)]는 새롭게 등장한 구글의 모바일 UI 프레임워크입니다. 기존에 안드로이드 UI 구현을 위해 layout, style 등 다수의 관련 XML 파일을 작성했다면, 플러터를 이용해서는 다트(Dart) 언어 코드로 위젯 트리(Widget tree)작성이 가능하며, 뷰의 상태나 이벤트에 따른 UI 변경을 동적으로 쉽게 할 수 있습니다.
 
@@ -249,10 +249,6 @@ class SampleApp extends StatelessWidget {
 이제 레진코믹스 앱을 잘 표현해줄 수 있는, 레진코믹스만의 머터리얼 테마를 디자인하고 개발할 시간입니다. _이츠 디벨롭 타임므~!_
 
 ## 참조
-* Building Material Design products: [https://youtu.be/Ty6VjgVHiko](https://youtu.be/Ty6VjgVHiko)
-* Customize Material Components: [https://youtu.be/3VUMl_l-_fI](https://youtu.be/3VUMl_l-_fI)
-* New in Material Design: [https://youtu.be/D7LB-QPxH9c](https://youtu.be/D7LB-QPxH9c)
-* Flutter & Material Design: [https://youtu.be/hA0hrpR-o8U](https://youtu.be/hA0hrpR-o8U)
 * Getting started with Material Theme Editor: [https://youtu.be/BLrgDgd_1c0](https://youtu.be/BLrgDgd_1c0)
 * Getting started with Gallery: [https://youtu.be/TIB3q68ZHYw](https://youtu.be/TIB3q68ZHYw)
 * [https://design.google/library/making-more-with-material/](https://design.google/library/making-more-with-material/)
