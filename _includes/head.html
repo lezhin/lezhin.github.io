@@ -20,6 +20,9 @@
 <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
 <meta property="og:site_name" content="{{ site.title | xml_escape }}"/>
 <meta property="og:image" content="{{ meta_image }}"/>
+{% if site.facebook_app_id %}
+<meta property="fb:app_id" content="{{ facebook_app_id }}" />
+{% endif %}
 
 <meta name="twitter:card" content="summary"/>
 {% if site.twitter_username %}
