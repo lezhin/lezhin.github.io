@@ -11,7 +11,7 @@ date: 2018-06-11 00:00:00
 
 ## 새로운 기능을 더한 안드로이드
 
-안드로이드 앱 사이즈를 효과적으로 줄일 수 있는 앱 번들과 동적 전달(App Bundle & Dynamic Delivery), 안드로이드 개발을 도와주는 라이브러리, 도구 등을 제공하는 안드로이드 제트팩(Android JetPack), 새로운 기능이 추가된 안드로이드 스튜디오(Android Studio)를 소개했고, 그 밖의 새로운 기능들을 추가해서 더 자유롭고 재미있는 개발이 가능해졌습니다.
+안드로이드 앱 사이즈를 효과적으로 줄일 수 있는 앱 번들과 동적 전달(App Bundle & Dynamic Delivery), 안드로이드 개발을 도와주는 라이브러리, 도구 등을 제공하는 안드로이드 제트팩(Android JetPack), 새로운 기능이 추가된 안드로이드 스튜디오(Android Studio)를 소개했고, 그 밖의 다양한 기능들을 추가해서 더 자유롭고 재미있는 개발이 가능해졌습니다.
 
 ### [앱 번들과 동적 전달(App Bundle & Dynamic Delivery)](https://developer.android.com/guide/app-bundle/)
 
