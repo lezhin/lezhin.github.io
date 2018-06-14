@@ -11,7 +11,7 @@ date: 2018-06-11 00:00:00
 
 ## 새로운 기능을 더한 안드로이드
 
-안드로이드 앱 사이즈를 효과적으로 줄일 수 있는 앱 번들과 동적 전달(App Bundle & Dynamic Delivery), 안드로이드 개발을 도와주는 라이브러리, 도구 등을 제공하는 안드로이드 제트팩(Android JetPack), 안드로이드 스튜디오(Android Studio)를 소개했고, 그 밖의 새로운 기능들을 추가해서 더 자유롭고 재미있는 개발이 가능해졌습니다.
+안드로이드 앱 사이즈를 효과적으로 줄일 수 있는 앱 번들과 동적 전달(App Bundle & Dynamic Delivery), 안드로이드 개발을 도와주는 라이브러리, 도구 등을 제공하는 안드로이드 제트팩(Android JetPack), 새로운 기능이 추가된 안드로이드 스튜디오(Android Studio)를 소개했고, 그 밖의 새로운 기능들을 추가해서 더 자유롭고 재미있는 개발이 가능해졌습니다.
 
 ### [앱 번들과 동적 전달(App Bundle & Dynamic Delivery)](https://developer.android.com/guide/app-bundle/)
 
@@ -25,11 +25,11 @@ date: 2018-06-11 00:00:00
 
 <img src="https://1.bp.blogspot.com/-dwL58chu7wo/WvD1RrHln3I/AAAAAAAAFUg/cRTc0IZga_wMPTWr3CI53IZ5BwtnZMeYACLcBGAs/s1600/Screen%2BShot%2B2018-05-05%2Bat%2B11.49.30%2BAMimage1.png" width="800" alt>
 
-안드로이드 제트팩은 안드로이드 개발을 도와주는 라이브러리, 도구들을 포함한 라이브러리 모음입니다. 기존의 서포트 라이브러리, 안드로이드 아키텍처 컴포넌트와 이번에 추가된 새로운 라이브러리를 병합하여 크게 4가지 구성요소로 나누었습니다. 기존 안드로이드 버전들과 호환될 뿐만 아니라 불필요한 코드들(Boiler plate)을 제거했고, 패키지 이름을 AndroidX로 변경했습니다. 패키지 이름 변경이 패키지 경로(Package path) 문제를 유발하지 않도록 안드로이드 스튜디오 3.2에서 리팩터(Refactor)기능을 지원한다고 합니다.
+안드로이드 제트팩은 안드로이드 개발을 도와주는 라이브러리, 도구들을 포함한 라이브러리 모음입니다. 기존의 서포트 라이브러리, 안드로이드 아키텍처 컴포넌트와 이번에 추가된 새로운 라이브러리를 병합하여 크게 4가지 구성요소로 나누었습니다. 기존 안드로이드 버전들과 호환될 뿐만 아니라 불필요한 코드(Boiler plate)를 제거했고, 패키지 경로(Package path)를 AndroidX로 통일하였습니다. 패키지 경로가 통일됨에 따라 패키지 경로 문제를 유발하지 않도록 안드로이드 스튜디오 3.2에서 리팩터(Refactor)기능을 지원한다고 합니다.
 
 ### [안드로이드 스튜디오(Android Studio)](https://developer.android.com/studio/preview/)
 
-위에서 소개한 앱 번들과 동적 전달, 안드로이드 제트팩에서 필요한 메뉴들(App Bundle Menu, JetPack Refactor Menu)을 안드로이드 스튜디오에 추가했습니다. 이것과는 별개로 기존 에뮬레이터(Emulator)에 스냅샷(Snapshot) 기술을 적용하여 속도를 개선했고, 에너지 프로파일링(Energy Profiling) 기술을 적용하여 앱의 배터리 소모를 추적할 수 있습니다.
+위에서 소개한 앱 번들과 동적 전달, 안드로이드 제트팩에서 필요한 메뉴들(App Bundle Menu, JetPack Refactor Menu)을 안드로이드 스튜디오에 추가했습니다. 이것과는 별개로 기존 에뮬레이터(Emulator)에 스냅샷(Snapshot) 기술을 적용하여 속도를 개선했고, 에너지 프로파일링(Energy Profiling) 기술을 적용하여 앱의 배터리 소모를 추적할 수 있게 되었습니다.
 
 ## 안드로이드 제트팩
 
@@ -158,7 +158,7 @@ class MainActivity : AppCompatActivity() {
 
 <img src="http://img.youtube.com/vi/a7IVH5aNwwc/0.jpg" width="480" alt>
 
-슬라이스(Slices)는 외부에 콘텐츠를 공유하거나, 공유받아 사용할 수 있는 라이브러리입니다. 슬라이스 콘텐츠(Slices Content)가 정의되어 있는 다른 앱의 콘텐츠를 슬라이스 프로바이더(Slices Provider)를 통해 가져올 수 있으며, 화면에 출력한 컨텐츠는 정의한 것에 한해 자유롭게 사용할 수 있습니다.
+슬라이스(Slices)는 외부에 콘텐츠를 공유하거나, 공유받아 사용할 수 있는 라이브러리입니다. 슬라이스 콘텐츠(Slices Content)가 정의되어 있는 다른 앱의 콘텐츠를 슬라이스 프로바이더(Slices Provider)를 통해 가져올 수 있으며, 화면에 출력한 컨텐츠는 정의된 것에 한해 자유롭게 사용할 수 있습니다.
 
 #### 슬라이스 URI 분류
 
