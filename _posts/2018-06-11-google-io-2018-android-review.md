@@ -333,11 +333,11 @@ db.transaction {
 Google I/O 2017보다 많고 다양한 기능을 안드로이드(Android)에 추가하고 변경했습니다. 특히 안드로이드 제트팩을 포함 그 안에서 새로운 기능들을 많이 추가했고, 그 밖에 안드로이드 P 버전의 기능들이나, 안드로이드 스튜디오에도 많은 기능들을 추가했습니다. 이제 개발자들은 입맛에 맞는 것들만 골라 즐겁게 개발할 일만 남았습니다.
 
 ## 참조
-* https://android.jlelse.eu/exploring-jetpack-scheduling-tasks-with-work-manager-fba20d7c69bf
-* https://android.jlelse.eu/exploring-jetpack-the-power-of-chains-in-the-workmanager-apis-30509ca4b2c
-* https://www.youtube.com/playlist?list=PLWz5rJ2EKKc9Gq6FEnSXClhYkWAStbwlC
-* https://medium.com/exploring-android/exploring-android-p-fingerprint-dialog-fa672ae62c6f
-* https://vivekc.xyz/whats-new-in-android-p-the-breaking-changes-and-amazing-features-8f4e864802a9
-* https://medium.com/@elye.project/android-p-whats-new-summary-fa8af407f6f3
-* https://hackernoon.com/google-i-o-2018-all-you-need-to-know-about-the-key-announcements-8adc9e10f774
-* https://medium.com/the-gadget-flow/google-i-o-2018-keynote-had-a-lot-of-ai-and-immersive-tech-in-store-5d5186a30e39
+* [Exploring Jetpack: Scheduling tasks with Work Manager](https://android.jlelse.eu/exploring-jetpack-scheduling-tasks-with-work-manager-fba20d7c69bf)
+* [Exploring Jetpack: The power of chains in the WorkManager APIs](https://android.jlelse.eu/exploring-jetpack-the-power-of-chains-in-the-workmanager-apis-30509ca4b2c)
+* [Android and Google Play at Google I/O 2018 - Youtube](https://www.youtube.com/playlist?list=PLWz5rJ2EKKc9Gq6FEnSXClhYkWAStbwlC)
+* [Exploring Android P: Fingerprint Dialog](https://medium.com/exploring-android/exploring-android-p-fingerprint-dialog-fa672ae62c6f)
+* [What’s new in Android P — The breaking changes and Amazing features](https://vivekc.xyz/whats-new-in-android-p-the-breaking-changes-and-amazing-features-8f4e864802a9)
+* [Android P — What’s new (summary)](https://medium.com/@elye.project/android-p-whats-new-summary-fa8af407f6f3)
+* [Google I/O 2018: All you need to know about the key announcements](https://hackernoon.com/google-i-o-2018-all-you-need-to-know-about-the-key-announcements-8adc9e10f774)
+* [Google I/O 2018 Keynote Had a Lot of AI and Immersive Tech in Store](https://medium.com/the-gadget-flow/google-i-o-2018-keynote-had-a-lot-of-ai-and-immersive-tech-in-store-5d5186a30e39)
