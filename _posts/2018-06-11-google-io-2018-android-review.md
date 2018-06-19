@@ -80,7 +80,7 @@ UUID나 TAG를 사용하여 작업 취소가 편리하며, 안드로이드 SDK �
 
 ### [네비게이션(Navigation)](https://developer.android.com/topic/libraries/architecture/navigation/)
 
-<img src="/files/2018-06-11-google-io/1.png" width="600" alt>
+<img src="//files/2018-06-11-google-io/1.png" width="600" alt>
 
 네비게이션 아키텍처 컴포넌트(Navigation Architecture Component)는 액티비티(Activity) 및 프래그먼트(Fragment) 전환, 스택(Stack), 값 전달(Passing Argument), 딥링크(Deep Links), 테스트(Test) 등을 더욱 편하게 관리할 수 있도록 도와주는 라이브러리입니다.
 
@@ -150,7 +150,7 @@ class MainActivity : AppCompatActivity() {
 * 엔드포인트(EndPoint)를 이용하여 프래그먼트(Fragment)에서 액티비티(Activity)로 지정할 수 있습니다.
 * 네비게이션(Navigation) 안에서 액티비티(Activity)간 이동은 허용하지 않습니다.(아래 그림 참고)
 
-<img src="/files/2018-06-11-google-io/error1.png" width="300" alt>
+<img src="//files/2018-06-11-google-io/error1.png" width="300" alt>
 
 더 자세한 코드는 깃허브에 정리했습니다. [네비게이션 예제](https://github.com/gyooha/NavigationExample.git)를 참고해주세요.
 
@@ -216,7 +216,7 @@ override fun onBindSlice(sliceUri: Uri?): Slice {
     }
 ```
 
-<img src="/files/2018-06-11-google-io/6.png" width="300" alt><img src="/files/2018-06-11-google-io/7.png" width="300" alt>
+<img src="//files/2018-06-11-google-io/6.png" width="300" alt><img src="//files/2018-06-11-google-io/7.png" width="300" alt>
 
 * 왼쪽과 같은 이미지의 앱을 오른쪽 화면에 떠있는 URI를 이용하여 원격으로 접근 가능하고, 미리 정의해놓은 콘텐츠까지 이용 가능합니다.
 
@@ -288,7 +288,7 @@ db.transaction {
 
 ### 어답티브 배터리(Adaptive Battery)
 
-<img src="/files/2018-06-11-google-io/4.gif" width="600" alt>
+<img src="//files/2018-06-11-google-io/4.gif" width="600" alt>
 
 어답티브 배터리(Adaptive Battery)는 기계학습과 사용자의 모바일 사용경험을 병합하여 자주 사용하는 앱부터 자주 사용하지 않는 앱까지 우선순위를 매깁니다. 이 우선순위에 따라 Active, Working Set, Frequent, Rare 라고 하는 버킷(Buckets)에 담고 Active 버킷에 담지 않은 앱은 Jobs, Alarms, Network, FCM 등에 제약을 겁니다.
 
@@ -300,31 +300,31 @@ db.transaction {
 
 ### 새로운 네비게이션 시스템
 
-<img src="/files/2018-06-11-google-io/5.gif" width="600" alt>
+<img src="//files/2018-06-11-google-io/5.gif" width="600" alt>
 
 안드로이드 P에서 새로운 네비게이션 시스템(Navigation System)을 소개했습니다. 모든 화면을 버튼 하나로 이동할 수 있고, 실행중인 작업을 한눈에 볼 수 있습니다. 또한 스위핑(Sweeping)을 이용하여 작업을 이동할 수 있고, 원하는 앱을 빠르게 다시 열 수 있습니다.
 
 ### 지문인식
 
-<img src="/files/2018-06-11-google-io/2.png" width="600" alt> <img src="/files/2018-06-11-google-io/3.png" width="600" alt>
+<img src="//files/2018-06-11-google-io/2.png" width="600" alt> <img src="//files/2018-06-11-google-io/3.png" width="600" alt>
 
 사용자와 앱사이의 신뢰를 높이기 위해 새로운 지문인식 다이얼로그(Dialog)를 지원합니다.
 
 ### 컷아웃(Cut out)
 
-<img src="/files/2018-06-11-google-io/8.png" width="600" alt>
+<img src="//files/2018-06-11-google-io/8.png" width="600" alt>
 
 안드로이드 진영에도 악명높은 탈모 디자인이 생겼습니다. 탈모 디자인에 대비하여 안드로이드 P부터 컷아웃을 지원합니다.
 
 ### 방해금지모드(Do Not Disturb Mode)
 
-<img src="/files/2018-06-11-google-io/10.png" width="300" alt>
+<img src="//files/2018-06-11-google-io/10.png" width="300" alt>
 
 안드로이드 P부터 모바일 화면을 책상에 덮어높으면 알람이 울리지 않는 방해금지모드를 추가했습니다.
 
 ### 사용자 대시보드와 앱 타이머(User DashBoard & App Timer)
 
-<img src="/files/2018-06-11-google-io/9.gif" width="600" alt>
+<img src="//files/2018-06-11-google-io/9.gif" width="600" alt>
 
 사용자의 모바일 사용기록을 확인할 수 있는 대시보드(DashBoard)를 안드로이드 P부터 추가했습니다. 사용자의 모바일 사용 욕구를 반감시키는 앱 타이머(App Timer) 기능을 추가했습니다. 모바일 중독을 방지하기 위한 기능입니다.
 
