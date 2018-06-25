@@ -95,7 +95,6 @@
 
 .site-wrapper {
   margin: 1em;
-  padding: 1em;
 }
 
 .post-list {
@@ -107,8 +106,6 @@
   }
   .post-item + .post-item {
     border-top: 1px solid $lightgray;
-  }
-  .post-title {
   }
 }
 
@@ -243,21 +240,29 @@
 }
 
 .share-buttons {
-  margin: .5em;
-  font-size: 1.25em;
+  white-space: nowrap;
   text-align: center;
-  a {
-    display: inline-block;
-    width: 3em;
-    height: 2em;
-    line-height: 2em;
-    text-align: center;
-    vertical-align: middle;
-    background-color: $lightgray;
-    border-radius: 4px;
-  }
-  a + a {
-    margin-left: .5em;
+  margin: 1em 0;
+  font-size: 1.25em;
+  // a {
+  //   display: inline-block;
+  //   width: 3em;
+  //   height: 2em;
+  //   line-height: 2em;
+  //   text-align: center;
+  //   vertical-align: middle;
+  //   background-color: $lightgray;
+  //   border-radius: 4px;
+  //   text-decoration: none;
+  // }
+  // a + a {
+  //   margin-left: .5em;
+  // }
+  .fb-like,
+  .twitter-share-button {
+    display: inline-block !important;
+    vertical-align: top !important;
+    font-size: 0  !important;
   }
 }
 
