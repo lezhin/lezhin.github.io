@@ -37,6 +37,10 @@ $ bundle install
 ```
 
 ### 실행(로컬)
+로컬 실행 전 `_config.yml` 파일에서 `baseurl:` 부분을 주석처리. 로컬 확인 후 배포(발행) 전에 되돌려 놓는다.
+```
+# baseurl: 'https://tech.lezhin.com'
+```
 
 ```
 $ bundle exec jekyll serve
