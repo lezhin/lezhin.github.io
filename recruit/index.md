@@ -38,8 +38,9 @@ sitemap: true
  
 ## 개발 그룹
 
-- [**Biz.개발팀 웹개발자**](biz_front_develop)
+- [**Biz.개발팀 프론트엔드개발자**](biz_front_develop)
 - [**Biz.개발팀 백엔드개발자**](biz_backend_develop)
+- [**Biz.개발팀 데이터엔지니어**](biz_data_engineer)
 - [**웹개발팀 웹개발자**](web_develop)
 - [**서비스개발팀 백엔드개발자**](backend_develop)
 - [**Android 개발자**](android_develop)
