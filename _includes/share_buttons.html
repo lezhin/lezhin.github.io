@@ -1,4 +1,18 @@
 <div class="share-buttons">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.0';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <div class="fb-like" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+
+    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="true" data-size="large">Tweet</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    <!--
     <a class="fa fa-facebook plain"
        href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}"
        rel="nofollow" target="_blank" title="share on facebook"></a>
@@ -8,4 +22,5 @@
     <a class="fa fa-google-plus plain"
        href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}"
        rel="nofollow" target="_blank" title="share on google+"></a>
+    -->
 </div>
