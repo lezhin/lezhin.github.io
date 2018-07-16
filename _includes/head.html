@@ -10,7 +10,7 @@
 {% assign meta_image = page.image | default: site.image %}
 {% if page.url contains '/recruit/' %}
 {% assign meta_image = site.recruit_image %}
-{% endif %} 
+{% endif %}
 {% unless meta_image contains '://' %}
 {% assign meta_image = meta_image | prepend: site.url %}
 {% endunless %}
@@ -37,7 +37,7 @@
 <meta name="google-site-verification" content="{{ site.google_site_verification }}" />
 {% endif %}
 
-<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}"/>
+<link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}"/>
 <link rel="alternate" type="application/rss+xml" href="{{ site.baseurl }}/rss"/>
 
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css"/>
