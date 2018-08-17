@@ -70,8 +70,8 @@ $ git push origin master
 ### 글 쓰기
 
 1. `_posts` 디렉토리에 `yyyy-mm-dd-slug.md` 파일로 복사(or 이동).
- - slug: 해당 포스트의 고유 키로 url의 일부로 사용. 왠만하면 특수문자없이 영문자,숫자,-(하이픈),.(점)...만 사용.
- - yyyy,mm,dd: 발행 년,월,일.
+ - slug: 해당 포스트의 고유 키로 url의 일부로 사용. 웬만하면 특수문자없이 영문자, 숫자, 하이픈(-), 점(.)만 사용.
+ - yyyy,mm,dd: 발행 년,월,일. 발행일을 미래 날짜로 설정하면 로컬 빌드 안 됨.
  - 참고: 최종적으로 포스트의 url(permalink)는 http://tech.lezhin.com/yyyy/mm/dd/slug/
 2. 파일 상단에 [front matter] 작성
  - `---`
@@ -79,7 +79,7 @@ $ git push origin master
  - title: '제목' # 제목(필수).
  - author: `author-name` # 필자(필수).
  - tags: `[tag1,tag2,tag3,...]` # 태그 목록(선택). 왠만하면 특수문자없이 영소문자,숫자,-(하이픈),.(점)...만 사용.
- - date: `YYYY-MM-DD HH:MM:SS` # 발행일(필수)
+ - date: `YYYY-MM-DD HH:MM:SS` # 발행일(필수). 발행일을 미래 날짜로 설정하면 로컬 빌드 안 됨.
  - `---`
 3. 처음 글을 쓰는 필자이라면 **글쓴이 등록**(필수)
 4. 유력한(?) 태그가 새로 등장했다면 **태그 등록**(선택)
