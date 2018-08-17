@@ -70,7 +70,7 @@ $ git push origin master
 ### 글 쓰기
 
 1. `_posts` 디렉토리에 `yyyy-mm-dd-slug.md` 파일로 복사(or 이동).
- - slug: 해당 포스트의 고유 키로 url의 일부로 사용. 웬만하면 특수문자없이 영문자, 숫자, 하이픈(-), 점(.)만 사용.
+ - slug: 해당 포스트의 고유 키로 url의 일부로 사용. 웬만하면 특수문자 없이 영문자, 숫자, 하이픈(-), 점(.)만 사용.
  - yyyy,mm,dd: 발행 년,월,일. 발행일을 미래 날짜로 설정하면 로컬 빌드 안 됨.
  - 참고: 최종적으로 포스트의 url(permalink)는 http://tech.lezhin.com/yyyy/mm/dd/slug/
 2. 파일 상단에 [front matter] 작성
@@ -78,7 +78,7 @@ $ git push origin master
  - layout: post # 레이아웃(필수). `page` 레이아웃을 사용하면 목록에 보이지 않는 글을 쓸 수 있음.
  - title: '제목' # 제목(필수).
  - author: `author-name` # 필자(필수).
- - tags: `[tag1,tag2,tag3,...]` # 태그 목록(선택). 왠만하면 특수문자없이 영소문자,숫자,-(하이픈),.(점)...만 사용.
+ - tags: `[tag1,tag2,tag3,...]` # 태그 목록(선택). 웬만하면 특수문자 없이 영문자, 숫자, 하이픈(-), 점(.)만 사용.
  - date: `YYYY-MM-DD HH:MM:SS` # 발행일(필수). 발행일을 미래 날짜로 설정하면 로컬 빌드 안 됨.
  - `---`
 3. 처음 글을 쓰는 필자이라면 **글쓴이 등록**(필수)
@@ -91,7 +91,7 @@ $ git push origin master
 2. 파일 상단에 [front matter] 작성
  - `---`
  - layout: author # 레이아웃(선택).
- - name: `author-name` # post의 author와 매칭(필수). 왠만하면 특수문자없이 영소문자,숫자,-(하이픈),.(점)...만 사용.
+ - name: `author-name` # post의 author와 매칭(필수). 웬만하면 특수문자 없이 영문자, 숫자, 하이픈(-), 점(.)만 사용.
  - title: ... # 왠만하면 한글이름 사용( 필수)
  - image: http://... # 프로필 이미지(필수)
  - `---`
@@ -104,7 +104,7 @@ $ git push origin master
 2. 파일 상단에 [front matter] 작성
  - `---`
  - layout: tag # 레이아웃(자동)
- - name: `tag-name` # post의 tags 배열의 항목과 매칭(필수). 왠만하면 특수문자없이 영소문자,숫자,-(하이픈),.(점)...만 사용.
+ - name: `tag-name` # post의 tags 배열의 항목과 매칭(필수). 웬만하면 특수문자 없이 영문자, 숫자, 하이픈(-), 점(.)만 사용.
  - title: ... # 좀 더 길고 구체적인 설명(필수)
  - image: http://... # 태그 이미지(선택)
  - `---`
