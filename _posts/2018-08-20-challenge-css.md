@@ -1,5 +1,4 @@
 ---
-layout: page
 title: '레진 챌린지 CSS 개발 후기'
 author: naradesign
 tags: [web,css]
