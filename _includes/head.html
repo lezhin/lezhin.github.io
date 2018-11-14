@@ -8,9 +8,6 @@
 <meta name="keywords" content="{{ page.tags | join: ',' }}"/>
 {% endif %}
 {% assign meta_image = page.image | default: site.image %}
-{% if page.url contains '/recruit/' %}
-{% assign meta_image = site.recruit_image %}
-{% endif %}
 {% unless meta_image contains '://' %}
 {% assign meta_image = meta_image | prepend: site.url %}
 {% endunless %}

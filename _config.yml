@@ -5,7 +5,6 @@ url: 'https://tech.lezhin.com'
 enforce_ssl: 'tech.lezhin.com'
 baseurl: 'https://tech.lezhin.com' # 로컬 테스트 시 주석 처리. 배포 시 주석 해제.
 image: '/assets/img/lezhin_social_image.png'
-recruit_image: '/assets/img/lezhin_recruit.png'
 timezone: Asia/Seoul
 date_format: "%Y-%m-%d"
 
@@ -58,11 +57,6 @@ defaults:
     values:
       layout: page
       sitemap: true
-  - scope:
-      path: 'recruit'
-    values:
-      layout: recruit
-      sitemap: false
 
 google_analytics_ua: UA-100323260-1
 google_site_verification: 6Ff6VcvMN_e4o7B7ulEaWwR6w1gZKenhnBRLGMqOEoE
