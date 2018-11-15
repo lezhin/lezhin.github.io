@@ -65,7 +65,7 @@ tags: [kotlin]
 
 * 그냥 ~~손가락빨고~~ 기다려야 합니다. 아니면, 직접 만드세요!
 
-## 문제: 나 돌아갈래~ 
+## 문제: 나 돌아갈래~
 
 * 돌아가기 쉽지 않습니다. 자바를 코틀린으로 옮기기에는 쉬운데, 반대는... 어렵습니다!
 	* 코드가 깨지고, 변수명부터, 이런 저런 부분들을 다시 구현해야합니다.
@@ -73,7 +73,7 @@ tags: [kotlin]
 
 ![](/files/2017-08-03-the-case-against-kotlin/seol_in_peppermint_candy.jpg)
 
-## 해결책: 나 돌아갈래~ 
+## 해결책: 나 돌아갈래~
 
 * 되돌아오는 건 쉽지 않기 때문에 잘 생각해야 합니다.
 * 유닛 테스트가 정말 잘 된 파일들부터 바꾸세요.
@@ -87,5 +87,5 @@ tags: [kotlin]
 
 ![](/files/2017-08-03-the-case-against-kotlin/seol_in_silmido.jpg)
 
-> 그래서 말인데... [레진코믹스에서 코틀린 삽질을 함께 할 개발자를 모십니다!](/recruit)
+> 그래서 말인데... [레진코믹스에서 코틀린 삽질을 함께 할 개발자를 모십니다!](https://github.com/lezhin/apply/blob/master/README.md)
 
