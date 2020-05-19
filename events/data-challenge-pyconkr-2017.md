@@ -4,8 +4,6 @@ title: 레진 데이터 챌린지 2017
 
 > [레진코믹스](https://www.lezhin.com/)의 실 서비스에서 추출한 데이터 **65만여건**을 공개합니다!
 
-{% include figure.html src="/assets/img/lezhin_trans_128x128.png" class="noborder" %}
-
 ## 목표
 
 TL;DR 공개된 데이터셋을 활용하여, **구매 예측 모델**을 만들어주세요.
