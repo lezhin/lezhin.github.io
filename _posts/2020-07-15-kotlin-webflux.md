@@ -2,7 +2,7 @@
 title: 'Spring WebFlux 기반의 컨텐츠 인증 서비스 개발 후기'
 author: digimon
 tags: [backend,kotlin,spring,webflux]
-date: 2020-02-16 00:00:00
+date: 2020-07-15 00:00:00
 ---
 제가 일하고 있는 서비스 개발팀은 레진코믹스의 백엔드 서비스를 책임지고 있는 팀입니다. 저희는 작년부터 <mark>Kotlin</mark>과 <mark>Spring WebFlux</mark>를 메인 스택으로 선정하여 개발하고 있습니다. 이 글에선 WebFlux 기반의 컨텐츠 인증 서비스를 개발하면서 경험한 이슈들을 공유하려 합니다. 
 
