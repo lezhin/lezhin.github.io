@@ -8,7 +8,7 @@ date: 2020-07-15 00:00:00
 
 이 글은 WebFlux 또는 리액티브 프로그래밍에 대한 기초 지식을 다루진 않으므로 다소 불친절하게 느껴질 수 있는 점 양해 바랍니다. WebFlux에 대한 기초적인 내용은 제 블로그의 [Spring WebFlux와 Kotlin으로 만드는 Todo 서비스 - 1편](https://devsh.tistory.com/entry/Spring-WebFlux-with-Kotlin)을 참고하시기 바랍니다.
 
-**이 글에서 소개 예제는 저희가 서비스하고 있는 코드를 <mark>공개용으로 변경</mark>했기 때문에 정상 동작을 보장하지 않습니다. 참고 부탁드립니다** 
+**이 글의 예제는 저희가 서비스하고 있는 코드를 <mark>공개용으로 변경</mark>했기 때문에 정상 동작을 보장하지 않습니다. 참고 부탁드립니다** 
 
 ## 이 글에서 다루고 있는 내용
 * [R2DBC](#r2dbcreactive-relational-database-connectivity)
