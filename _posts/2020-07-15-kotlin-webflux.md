@@ -1,16 +1,16 @@
 ---
-title: 'Spring WebFlux 기반의 컨텐츠 인증 서비스 개발 후기'
+title: 'Kotlin과 Spring WebFlux 기반의 컨텐츠 인증 서비스 개발 후기'
 author: digimon
-tags: [backend,kotlin,spring,webflux]
+tags: [backend,kotlin,spring,webflux,r2dbc,redis]
 date: 2020-07-15 00:00:00
 ---
 제가 일하고 있는 서비스 개발팀은 레진코믹스의 백엔드 서비스를 책임지고 있는 팀입니다. 저희는 작년부터 <mark>Kotlin</mark>과 <mark>Spring WebFlux</mark>를 메인 스택으로 선정하여 개발하고 있습니다. 이 글에선 WebFlux 기반의 컨텐츠 인증 서비스를 개발하면서 경험한 이슈들을 공유하려 합니다. 
 
 이 글은 WebFlux 또는 리액티브 프로그래밍에 대한 기초 지식을 다루진 않으므로 다소 불친절하게 느껴질 수 있는 점 양해 바랍니다. WebFlux에 대한 기초적인 내용은 제 블로그의 [Spring WebFlux와 Kotlin으로 만드는 Todo 서비스 - 1편](https://devsh.tistory.com/entry/Spring-WebFlux-with-Kotlin)을 참고하시기 바랍니다.
 
-**이 글에서 소개하는 예제는 저희가 서비스하고 있는 코드를 <mark>공개용으로 변경</mark>했기 때문에 정상 동작을 보장하지 않습니다. 참고 부탁드립니다** 
+**이 글에서 소개 예제는 저희가 서비스하고 있는 코드를 <mark>공개용으로 변경</mark>했기 때문에 정상 동작을 보장하지 않습니다. 참고 부탁드립니다** 
 
-## 이글에서 다루고 있는 내용
+## 이 글에서 다루고 있는 내용
 * [R2DBC](#r2dbcreactive-relational-database-connectivity)
 * [Reactive Redis를 사용한 캐시 적용](#reactive-redis를-사용한-캐시-적용)
 * [RestTemplate 대신 WebClient](#resttemplate-대신-webclient)
@@ -21,10 +21,10 @@ date: 2020-07-15 00:00:00
 컨텐츠 인증 서비스는 유저가 레진코믹스 컨텐츠의 구매 여부를 판별하는 서비스입니다. 기본적으로 이미지 서버와 통신하며 유료 작품이라면 유저가 해당 작품을 구매했는지 판별하거나 무료 작품이라면 회원인지 비회원인지 판별하여 컨텐츠 접근 여부를 응답하는 단순하지만 없어선 안되는 서비스입니다.  
 
 ### 컨텐츠 인증 서비스 기술 스택
-* Kotlin 1.3.71
-* Spring Boot 2.3.0.RELEASE
+* Kotlin 1.3.x
+* Spring Boot 2.3.x
 * Spring WebFlux 
-* Spring Data R2DBC 1.1.1
+* Spring Data R2DBC 1.1.x
 * Spring Data Redis Reactive
 * Spring Boot Actuator
 
@@ -47,10 +47,10 @@ blockingWrapper = blockingWrapper.subscribeOn(Schedulers.boundedElastic());
 ### Spring Data R2DBC 적용
 R2DBC를 스프링 환경에서 쉽게 사용하는 방법은 [Spring Data R2DBC](https://docs.spring.io/spring-data/r2dbc/docs/1.0.x/reference/html/#reference)를 사용하는 것입니다.  [Spring Data R2DBC 공식 깃헙](https://github.com/spring-projects/spring-data-r2dbc)을 보면  
 <mark>This is Not an ORM</mark>이라는 문구가 가장 먼저 눈에 띕니다. 이것은 JPA가 ORM 프레임 워크임을 어필하는 것과 대조적인 부분입니다. 
-Spring Data R2DBC가 목표로 하는 것은 심플하고 일반적인 ORM 프레임 워크가 지원하는 caching, lazy loading, write behind 등을 지원하지 않습니다.
+Spring Data R2DBC는 단순함을 지향하여 일반적인 ORM 프레임 워크가 지원하는 caching, lazy loading, write behind 등을 지원하지 않습니다.
  
 #### ReactiveCrudRepository를 상속하는 리파지토리 인터페이스
-Spring Data JPA나 Spring Data JDBC에 대해 숙련도가 있었기 때문에 Spring Data R2DBC를 적용할때 큰 어려움은 없었습니다. 
+Spring Data JPA나 Spring Data JDBC을 이미 사용하고 있어, Spring Data R2DBC를 적용할때 큰 어려움이 없었습니다.
 Spring Data 프로젝트는 리액티브 패러다임을 지원하는 <mark>ReactiveCrudRepository</mark>를 제공하므로
 ReactiveCrudRepository 인터페이스를 상속하는 인터페이스를 만들어 주면 쉽게 Spring Data R2DBC를 사용할 수 있습니다.
 ```javascript
@@ -67,7 +67,6 @@ class MultiTenantRoutingConnectionFactory : AbstractRoutingConnectionFactory() {
 
     override fun determineCurrentLookupKey(): Mono<Any> {
         return TransactionSynchronizationManager.forCurrentTransaction().map {
-            var key = ContentDataSourceProperties.KEY
             if (it.isActualTransactionActive) {
                 if (it.currentTransactionName?.contains(SecondaryDataSourceProperties.BASE_PACKAGE)!!) {
                     SecondaryDataSourceProperties.KEY
@@ -261,7 +260,7 @@ class ContentService(val contentRepository: ContentRepository,
 이런 이유로 Spring5에서 추가된 <mark>WebClient</mark>를 사용해 리액티브 기반의 비동기-논블로킹 통신을 구현하였습니다.
 
 ### UserTokenRepositoryImpl
-UserTokenRepositoryImpl은 유저의 토큰을 가지고 `WebClient`를 사용해 유저 서비스를 호출하여 받아온 결과를 유저 정보에 매핑합니다. 이러한 동작은 모두 리액티브 하게 비동기-논블로킹 형태로 동작합니다. 
+UserTokenRepositoryImpl은 유저의 토큰을 가지고 `WebClient`를 사용해 유저 서비스를 호출해 받아온 결과를 유저 객체 매핑합니다. 이러한 동작은 모두 리액티브 하게 비동기-논블로킹 형태로 동작합니다. 
 ```javascript
 @Repository
 class UserTokenRepositoryImpl(val webClientBuilder: WebClient.Builder) : UserTokenRepository {
@@ -334,8 +333,8 @@ management:
 ![](/files/2020-07-13-kotlin-webflux/grafana2.png)
 
 ## 회고
-이번 컨텐츠 인증 서버 개발은 리액티브 프로그래밍과 WebFlux에 대해 좀 더 익숙해지는 기회가 되었습니다. 그리고 Spring Data R2DBC가 GA 버전이 릴리즈되면서 모든 구간에서 비동기-논블로킹으로 개발할 수 있었습니다.
-사실 WebFlux와 R2DBC에 대해 공유하고 싶은 주제들이 더 있었지만 한편의 블로그로 작성하기엔 너무 길어지는 내용이 될 것 같아서 생략하였습니다.
+이번 컨텐츠 인증 서버 개발은 리액티브 프로그래밍과 WebFlux에 대해 좀 더 익숙해지는 기회가 되었습니다. 또 Spring Data R2DBC의 GA 버전이 릴리즈되면서 모든 구간에서 리액티브 스택을 적용할 수 있었습니다.
+이외에도 WebFlux와 R2DBC에 대해 공유하고 싶은 주제들이 더 있지만 한편의 블로그로 작성하기엔 너무 길어지는 내용이 될 것 같아서 생략하였습니다.
 기회가 된다면 얕은 지식이지만 저의 [개인 블로그](https://devsh.tistory.com/)나 [팝잇](https://www.popit.kr/author/tony_sanghoon)에서 공유를 이어가도록 하겠습니다.   
 
 마지막으로 저희 서비스 개발팀은 실력 있는 팀원들과 함께 도전하며 성장할 분들을 모시고 있습니다. 많은 지원 부탁드리며 긴 글 읽어주셔서 감사합니다.
